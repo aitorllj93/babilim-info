@@ -1,0 +1,36 @@
+---
+
+
+import website from "../../website.config";
+
+import type { CollectionEntry } from "astro:content";
+import Article from "../components/Article.astro";
+import ArticleTitle from "../components/ArticleTitle.astro";
+import Layout from "../components/Layout.astro";
+import LeftSidebar from "../components/LeftSidebar.astro";
+import ListItem from "../components/ListItem.astro";
+import { getAllGodsPageStaticPaths } from "../helpers/getProps";
+
+const { props } = getAllGodsPageStaticPaths()
+const { tags, documents, navigation, page } = props;
+
+const documentTagShouldBeShown = 
+  (d: CollectionEntry<'documents'>) => 
+    (t: CollectionEntry<'tags'>) => 
+      d.data.tags?.includes(t.data.id);
+
+---
+
+<Layout page={page}>
+  <LeftSidebar website={website} navigation={navigation} />
+  <Article>
+    <ArticleTitle>
+      Gods Index
+    </ArticleTitle>
+    <ul class="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-3">
+      {documents.map((d) => (
+        <ListItem tags={tags.filter(documentTagShouldBeShown(d))} document={d} />
+      ))}
+    </ul>
+  </Article>
+</Layout>

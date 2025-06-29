@@ -1,0 +1,83 @@
+---
+import type { Page } from "astro";
+
+export type Props = Page;
+
+const { currentPage, url, lastPage } = Astro.props;
+---
+
+<!-- Pagination -->
+<nav
+  class="flex items-center justify-center my-2 gap-x-1"
+  aria-label="Pagination"
+>
+  <a href={url.prev}>
+    <button
+      type="button"
+      disabled={!url.prev}
+      class:list={[
+        "min-h-11.5 min-w-11.5 py-4 px-4 inline-flex justify-center items-center gap-x-2 text-sm rounded-full text-button-foreground hover:bg-button-background focus:outline-hidden focus:bg-button-background disabled:opacity-50 disabled:pointer-events-none dark:text-button-foreground-dark dark:hover:bg-button-background-dark dark:focus:bg-button-background-dark",
+        url.prev && "cursor-pointer",
+      ]}
+      aria-label="Previous"
+    >
+      <svg
+        class="shrink-0 size-3.5"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m15 18-6-6 6-6"></path>
+      </svg>
+      <span class="sr-only">Previous</span>
+    </button>
+  </a>
+  <div class="flex items-center gap-x-1">
+    <span
+      class="font-menu min-h-11.5 min-w-11.5 flex justify-center items-center border border-button-background bg-button-background text-button-foreground py-3 px-3 text-sm rounded-full  dark:border-button-background-dark dark:text-button-foreground-dark dark:bg-background-dark"
+      >{currentPage}</span
+    >
+    <span
+      class="font-menu min-h-11.5 flex justify-center items-center text-menu-foreground py-3 px-1.5 text-sm dark:text-neutral-500"
+      >of</span
+    >
+    <span
+      class="font-menu min-h-11.5 flex justify-center items-center text-menu-foreground py-3 px-1.5 text-sm dark:text-neutral-500"
+      >{lastPage}</span
+    >
+  </div>
+  <a href={url.next}>
+    <button
+      type="button"
+      disabled={!url.next}
+      class:list={[
+        "min-h-11.5 min-w-11.5 py-4 px-4 inline-flex justify-center items-center gap-x-2 text-sm rounded-full text-button-foreground hover:bg-button-background focus:outline-hidden focus:bg-button-background disabled:opacity-50 disabled:pointer-events-none dark:text-button-foreground-dark dark:hover:bg-button-background-dark dark:focus:bg-button-background-dark",
+        url.next && "cursor-pointer",
+      ]}
+      aria-label="Next"
+    >
+      <span class="sr-only">Next</span>
+      <svg
+        class="shrink-0 size-3.5"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m9 18 6-6-6-6"></path>
+      </svg>
+    </button>
+  </a>
+</nav>
+<!-- End Pagination -->

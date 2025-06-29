@@ -1,0 +1,40 @@
+---
+import { getImage } from 'astro:assets';
+
+export type Props = {
+  cover?: ImageMetadata;
+  'cover-x'?: number;
+  'cover-y'?: number;
+}
+
+const { cover, 'cover-x': coverX, 'cover-y': coverY } = Astro.props;
+
+const coverImage = cover ? (await getImage({
+  src: cover,
+  format: 'webp',
+  quality: 'high',
+})) : undefined;
+
+const backgroundImage = coverImage ? `url('${coverImage.src}')` : undefined;
+// const backgroundPosition = coverX && coverY ? `${coverX}% ${coverY}%` : 'center';
+
+---
+{
+  coverImage && (
+    <link
+      rel="preload"
+      href={coverImage.src}
+      as="image"
+      fetchpriority="high" />
+    <div class="w-full max-w-[720px]  mx-auto h-48 md:h-[20rem] lg:h-[30rem] xl:h-[34rem] mb-4">
+      <div
+        class:list={[
+          `h-full w-full`,
+          `bg-cover bg-no-repeat mask-size-[100%_100%] mask-center mask-no-repeat mask-[url('../assets/scribble.png')]`,
+        ]}
+        style={`
+          background-image: ${backgroundImage};`}
+      />
+    </div>
+  )
+}

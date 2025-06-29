@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon/components";
+
+import type { CollectionEntry } from "astro:content";
+
+type TagType = NonNullable<CollectionEntry<"tags">["data"]["type"]>;
+
+export type Props = {
+  class?: string;
+  type?: TagType;
+  icon?: string;
+  size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
+};
+
+const { class: className, size = "md" } = Astro.props;
+
+const iconByType: Record<TagType, string> = {
+  Trait: "ph:person-duotone",
+  Domain: "mingcute:magic-3-fill",
+  Culture: "ic:twotone-flag",
+  Motif: 'mingcute:hashtag-fill',
+};
+
+const icon =
+  Astro.props.icon ??
+  (Astro.props.type ? iconByType[Astro.props.type] : "mdi:tag") ??
+  "mdi:tag";
+---
+
+<Icon
+  class:list={[
+    "min-w-min",
+    size === "xs" && "w-3 h-3",
+    size === "sm" && "w-4 h-4",
+    size === "md" && "w-4 h-4 lg:w-6 lg:h-6",
+    size === "lg" && "w-8 h-8",
+    size === "xl" && "w-10 h-10",
+    size === "2xl" && "w-8 h-8 lg:w-12 lg:h-12",
+    className,
+  ]}
+  name={icon}
+/>

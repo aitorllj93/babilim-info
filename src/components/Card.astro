@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { ignoreTags } from './../helpers/buildTags';
+import Tag from './Tag.astro';
+
+export type Props = {
+  activeTag?: string;
+  document: CollectionEntry<'documents'>;
+}
+
+const { activeTag, document: d } = Astro.props;
+
+const { data } = d;
+const { cover, description } = d.data;
+
+const proseClassName = 'prose text-paragraph-foreground dark:text-paragraph-foreground-dark prose-blockquote:border-text dark:prose-blockquote:border-text-dark prose-blockquote:text-blockquote-foreground dark:prose-blockquote:text-blockquote-foreground-dark prose-code:rounded-lg prose-code:px-1 prose-code:py-0.5 prose-code:before:content-none prose-code:after:content-none prose-code:text-code-foreground dark:prose-code:text-code-foreground-dark prose-code:bg-code-background dark:prose-code:bg-code-background-dark prose-li:marker:text-li-marker-foreground dark:prose-li:marker:text-li-marker-foreground-dark prose-strong:text-strong-foreground dark:prose-strong:text-strong-foreground-dark prose-headings:text-heading-foreground dark:prose-headings:text-heading-foreground-dark dark:prose-invert lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-a:text-primary prose-a:opacity-[0.7] prose-a:hover:opacity-100 prose-h1:text-article-title-foreground dark:prose-h1:article-title-foreground-dark prose-h1:font-title prose-headings:font-heading prose-p:font-paragraph prose-code:font-code prose-pre:!bg-pre-background dark:prose-pre:!bg-pre-background-dark prose-img:rounded-3xl prose-hr:border-t-2 prose-hr:border-hr-border dark:prose-hr:border-hr-border-dark';
+
+const coverX = undefined; // 'cover-x' in data ? data['cover-x'] : undefined;
+const coverY = undefined; // 'cover-y' in data ? data['cover-y'] : undefined;
+
+---
+<div class="block w-full h-full aspect-video">
+  <div class="bg-gray-100 aspect-video dark:bg-pink-600 shadow overflow-hidden rounded-xl md:rounded-3xl h-full flex flex-col hover:scale-105 transition-all">
+
+    <figure class="relative w-full aspect-video pb-[100%] rounded-xl md:rounded-3xl rounded-bl-none rounded-br-none overflow-hidden">
+      {cover && (
+        <a href={d.data.permalink} class="z-10 h-full w-full absolute">
+        <Image class:list={[
+        "aspect-[1.8_/_1] h-full w-full transition-all duration-200 object-contain overflow-hidden",
+        (coverX || coverY) ? '' : 'object-top'
+        ]} src={cover} alt=""
+          style={(coverX || coverY) ? `object-position: ${coverX}% ${coverY}%;`: ''} /></a>
+      )}
+
+      <figcaption class="absolute aspect-video inset-0 flex flex-col justify-between text-white">
+        <div class="flex justify-end p-1 md:p-2 z-10">
+          <ul class="flex gap-2 flex-wrap">
+            {d.data.tags?.filter(t => t !== activeTag && !ignoreTags.includes(t)).map((t) => (
+              <li>
+                <Tag size='sm' tag={t} />
+              </li>
+            )).filter(Boolean)}
+          </ul>
+        </div>
+        <a href={d.data.permalink} class="bg-black/50 p-1 md:p-2 z-10">
+          <h2 class="text-xl font-semibold">
+            {d.data.title}
+          </h2>
+          <p class="text-base line-clamp-2">
+            {description}
+          </p>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- <li class="flex flex-col gap-2 mb-4">
+  {cover && <Image src={cover} alt="" class:list={[
+    "rounded-3xl shadow w-full max-h-48 lg:max-h-[30rem] object-cover",
+    (coverX || coverY) ? `` : 'object-top'
+  ]} style={(coverX || coverY) ? `object-position: ${coverX}% ${coverY}%;`: ''}  />}
+  <a href={d.data.permalink} >
+  <h2 class="text-xl font-semibold">
+    {d.data.title}
+  </h2>
+  </a>
+  <ul class="flex gap-2 flex-wrap">
+    {d.data.tags?.filter(t => t !== activeTag && !ignoreTags.includes(t)).map((t) => (
+      <li>
+        <Tag size='sm' tag={t} />
+      </li>
+    )).filter(Boolean)}
+  </ul>
+  <p class="text-base line-clamp-2">
+    {description}
+  </p>
+</li> -->

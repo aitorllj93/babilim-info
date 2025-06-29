@@ -1,0 +1,10 @@
+{
+	"id": "avatar",
+	"name": "Avatar",
+	"version": "1.0.7",
+	"minAppVersion": "0.15.0",
+	"description": "Display an avatar image in your notes.",
+	"author": "froehlichA",
+	"authorUrl": "https://github.com/froehlichA",
+	"isDesktopOnly": false
+}

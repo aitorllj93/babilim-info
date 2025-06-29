@@ -1,0 +1,24 @@
+{
+  "provider": "openai-chatgpt",
+  "model": "gpt-4-1106-preview",
+  "enable_by_default": false,
+  "keybind": "Tab",
+  "delay_ms": 2000,
+  "stream": true,
+  "accept": {
+    "splitter_regex": "$",
+    "display_splitter_regex": "$",
+    "completion_completeness_regex": ".*",
+    "min_accept_length": 0,
+    "min_display_length": 0,
+    "retrigger_threshold": 128
+  },
+  "provider_settings": {
+    "openai-chatgpt": {
+      "settings": "{\"api_key\":\"<replace-with-your-key>\"}",
+      "models": {}
+    }
+  },
+  "presets": [],
+  "fallback": null
+}

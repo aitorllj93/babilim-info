@@ -1,0 +1,16 @@
+---
+export type Props = {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<h1
+  data-pagefind-weight="10"
+  class:list={[
+    "text-center text-article-title-foreground dark:text-article-title-foreground-dark",
+    className
+  ]}>
+  <slot />
+</h1>

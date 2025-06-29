@@ -1,0 +1,86 @@
+---
+import website from "../../../website.config";
+import Article from "../../components/Article.astro";
+import ArticleTitle from "../../components/ArticleTitle.astro";
+
+import Layout from "../../components/Layout.astro";
+import LeftSidebar from "../../components/LeftSidebar.astro";
+
+import Tag from "../../components/Tag.astro";
+import { getAllTagsPageStaticPaths } from "../../helpers/getProps";
+
+const { props } = getAllTagsPageStaticPaths();
+
+const { counts, navigation, page, tags } = props;
+---
+
+<Layout page={page}>
+  <LeftSidebar website={website} navigation={navigation} />
+  <Article>
+    <ArticleTitle>
+      Tags
+    </ArticleTitle>
+    <div class="not-prose flex flex-col gap-4">
+      <div>
+        <h2
+          class="font-heading text-4xl mb-4 text-heading-foreground dark:text-heading-foreground-dark"
+        >
+          Cultures
+        </h2>
+        <ul class="grid grid-cols-2 lg:grid-cols-6 gap-2 lg:gap-4">
+          {
+            tags.cultures.map((t) => (
+              <li>
+                <Tag
+                  class="truncate line-clamp-1"
+                  tag={t}
+                  count={counts[t.data.id]}
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h2
+          class="font-heading text-4xl mb-4 text-heading-foreground dark:text-heading-foreground-dark"
+        >
+          Domains
+        </h2>
+        <ul class="grid grid-cols-2 lg:grid-cols-6 gap-2 lg:gap-4">
+          {
+            tags.domains.map((t) => (
+              <li>
+                <Tag
+                  class="truncate line-clamp-1"
+                  tag={t}
+                  count={counts[t.data.id]}
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h2
+          class="font-heading text-4xl mb-4 text-heading-foreground dark:text-heading-foreground-dark"
+        >
+          Traits
+        </h2>
+        <ul class="grid grid-cols-2 lg:grid-cols-6 gap-2 lg:gap-4">
+          {
+            tags.traits.map((t) => (
+              <li>
+                <Tag
+                  class="truncate line-clamp-1"
+                  tag={t}
+                  count={counts[t.data.id]}
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </Article>
+</Layout>

@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+
+import type { DocumentContext, PageContext } from '../types';
+
+import Footer from './Footer.astro';
+import SEO from './SEO.astro';
+
+export type Props = {
+  page: PageContext
+  document?: DocumentContext;
+  scrollable?: boolean;
+}
+
+const { document, page, scrollable } = Astro.props;
+
+const { language } = page;
+---
+<!doctype html>
+<html class="scroll-smooth scrollbar-thin scrollbar-thumb-scrollbar-thumb dark:scrollbar-thumb-scrollbar-thumb-dark scrollbar-track-transparent" lang={language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/pwa-192x192.png" >
+    <link rel="mask-icon" href="/favicon.svg" color="#e7d2a9" >
+    <meta name="msapplication-TileColor" content="#e7d2a9" >
+    <meta name="theme-color" content="#e7d2a9" media="(prefers-color-scheme: light)" >
+    <meta name="theme-color" content="#262626" media="(prefers-color-scheme: dark)" >
+    <link rel="manifest" href="/manifest.webmanifest" >
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <SEO page={page} />
+  </head>
+  <body class:list={[
+    "w-full h-full bg-background dark:bg-background-dark",
+    scrollable ? 'overflow-x-hidden' : 'overflow-hidden'
+  ]}>
+    <div class="bg-texture bg-texture-light dark:bg-texture-dark" />
+    <main class="flex p-3 lg:p-6 lg:gap-6 items-start overflow-clip">
+      <slot />
+    </main>
+    <Footer document={document}  />
+  </body>
+</html>

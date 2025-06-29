@@ -1,0 +1,38 @@
+---
+
+import type {
+  AuthorContext,
+  DocumentContext,
+  NavigationContext,
+  PageContext,
+  TagsContext,
+} from "../../types";
+
+import website from "../../../website.config";
+
+import Layout from "../../components/Layout.astro";
+import LeftSidebar from "../../components/LeftSidebar.astro";
+import RightSidebar from "../../components/RightSidebar.astro";
+import { getMotifPageStaticPaths } from "../../helpers/getProps";
+import MotifEntry from "../../components/MotifEntry.astro";
+
+export type Props = {
+  author?: AuthorContext;
+  documents: DocumentContext[];
+  document: DocumentContext;
+  navigation: NavigationContext;
+  page: PageContext;
+  tags: TagsContext;
+};
+
+export const getStaticPaths = getMotifPageStaticPaths;
+
+const { author, documents, document, navigation, page, tags, } = Astro.props;
+
+---
+
+<Layout page={page} document={document}>
+  <LeftSidebar website={website} navigation={navigation} />
+  <MotifEntry documents={documents} author={author} document={document} tags={tags} />
+  <RightSidebar showRelations={false} document={document} navigation={navigation} />
+</Layout>

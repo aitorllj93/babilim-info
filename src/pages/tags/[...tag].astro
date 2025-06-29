@@ -1,0 +1,21 @@
+---
+import website from "../../../website.config";
+
+import Layout from "../../components/Layout.astro";
+import LeftSidebar from "../../components/LeftSidebar.astro";
+import TagEntry from "../../components/TagEntry.astro";
+import { getTagPageStaticPaths } from "../../helpers/getProps";
+
+export const getStaticPaths = getTagPageStaticPaths;
+
+const { entry, tag, navigation, page } = Astro.props;
+
+if (entry) {
+  return Astro.rewrite(`/${entry.id}`);
+}
+---
+
+<Layout page={page}>
+  <LeftSidebar website={website} navigation={navigation} />
+  <TagEntry {...Astro.props} />
+</Layout>

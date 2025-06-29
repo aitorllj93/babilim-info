@@ -1,0 +1,30 @@
+---
+import Search from "astro-pagefind/components/Search";
+
+import type { NavigationContext, WebsiteContext } from "../types";
+import Header from "./Header.astro";
+import NavigationTree from "./Navigation/Tree.astro";
+import Sidebar from './Sidebar.astro';
+
+export type Props = {
+  navigation: NavigationContext;
+  website: WebsiteContext;
+}
+
+const { navigation, website } = Astro.props;
+---
+<Sidebar class="hidden lg:flex" id="left-sidebar-desktop" open>
+  <Header id="headerDesktop" website={website} />
+  <nav class="search-nav">
+    <Search id="search" className="pagefind-ui-sidebar-search" uiOptions={{ showImages: false, pageSize: 10 }} />
+  </nav>
+  <NavigationTree navigation={navigation} />
+</Sidebar>
+
+<Sidebar class="flex lg:hidden" id="left-sidebar-touch">
+  <Header id="headerTouch" website={website} />
+  <nav class="search-nav">
+    <Search id="search" className="pagefind-ui-sidebar-search" uiOptions={{ showImages: false, pageSize: 10 }} />
+  </nav>
+  <NavigationTree navigation={navigation} />
+</Sidebar>

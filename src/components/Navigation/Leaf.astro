@@ -1,0 +1,79 @@
+---
+import type { CollectionEntry } from "astro:content";
+import type { Node } from "../../types";
+
+export type Props = {
+  expanded?: boolean;
+  node: Node<CollectionEntry<"documents">>;
+};
+
+const { expanded, node } = Astro.props;
+
+const isFolder = node.children?.length;
+
+let childIndex: Node<CollectionEntry<"documents">>|undefined;
+
+if (isFolder) {
+  const lastUrlPart = node.permalink.split("/").at(-1);
+
+  childIndex = node.children?.find(c => {
+    const cLastUrlPart = c.permalink.split("/").at(-1);
+    return cLastUrlPart === lastUrlPart;
+  })
+}
+
+const isAnyChildrenActive = (node: Node<CollectionEntry<"documents">>) => {
+  const isActive = decodeURI(Astro.url.pathname).startsWith(node.permalink)
+
+  if (isActive) {
+    return isActive;
+  }
+
+  if (node.children) {
+    return node.children.some(isAnyChildrenActive);
+  }
+}
+
+const isActive = isAnyChildrenActive(node);
+
+const isIndexActive  = childIndex &&
+  decodeURI(Astro.url.pathname).startsWith(childIndex.permalink);
+
+---
+
+<li
+  class:list={[
+    "w-full rounded-lg font-menu text-menu-foreground dark:text-menu-foreground-dark",
+    !isFolder && 'py-1 px-2 hover:bg-menu-active-background dark:hover:bg-menu-active-background-dark',
+    ((!isFolder && isActive)) && "bg-menu-active-background dark:bg-menu-active-background-dark",
+  ]}
+>
+  {
+    !isFolder ? (
+      <a
+        href={node.permalink}
+        title={node.name}
+        class="truncate block"
+      >
+        {node.name}
+      </a>
+    ) : null
+  }
+  {
+    isFolder ? (
+      <details class="marker:content-none" open={expanded ?? isActive}>
+        <summary class:list={[
+          "capitalize mb-0.5 rounded-lg py-1 px-2 cursor-pointer hover:bg-menu-active-background dark:hover:bg-menu-active-background-dark",
+          isIndexActive && "bg-menu-active-background dark:bg-menu-active-background-dark",
+        ]}>
+          {childIndex ? (<a href={childIndex.permalink} title={childIndex.name} class="truncate block">{childIndex.name}</a>) : (<span>{node.name}</span>)}
+        </summary>
+        <ul class="flex flex-col gap-0.5 ms-2">
+          {node.children?.filter(c => c.permalink !== childIndex?.permalink).map((c) => (
+            <Astro.self expanded={expanded} node={c} />
+          ))}
+        </ul>
+      </details>
+    ) : null
+  }
+</li>

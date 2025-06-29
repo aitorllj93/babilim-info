@@ -1,0 +1,56 @@
+---
+import Search from "astro-pagefind/components/Search";
+
+import website from "../../website.config";
+import WildHuntPicture from "../content/vault/Assets/Mythemes/Wild Hunt.jpg";
+
+import Layout from "../components/Layout.astro";
+import LeftSidebar from "../components/LeftSidebar.astro";
+import { getHomePageStaticPaths } from "../helpers/getProps";
+import { useI18n } from "../i18n/utils";
+
+const { t } = useI18n(Astro);
+
+const { props } = getHomePageStaticPaths();
+---
+
+<Layout page={props.page}>
+  <LeftSidebar
+    website={website}
+    navigation={props.navigation}
+  />
+  <article
+    class="flex flex-col gap-12 mt-24 rounded-4xl items-center grow-1 justify-center p-3 max-w-full"
+  >
+    <section class="flex flex-col gap-2 items-center">
+      <h1
+        class="text-6xl lg:text-8xl font-title text-article-title-foreground dark:text-article-title-foreground-dark"
+      >
+        {t('404.title')}
+      </h1>
+      <p
+        class="text-3xl font-heading text-paragraph-foreground dark:text-paragraph-foreground-dark"
+      >
+      {t('404.description')}
+      </p>
+    </section>
+    <Search
+      id="indexSearch"
+      className="pagefind-ui-main-search"
+      uiOptions={{ autofocus: true, showImages: false, pageSize: 6 }}
+    />
+    <!-- <Image src={BabylonPicture} alt="Babylon" class="rounded-full shadow-xl w-[50vh] aspect-square object-cover" /> -->
+    <div
+      class="w-full max-w-[720px] mx-auto h-48 md:h-[20rem] lg:h-[30rem] xl:h-[34rem] mb-4"
+    >
+      <div
+        class:list={[
+          `h-full w-full`,
+          `bg-cover bg-center bg-no-repeat mask-size-[100%_100%] mask-center mask-no-repeat mask-[url('../assets/scribble.png')]`,
+        ]}
+        style={`background-image: url('${WildHuntPicture.src}')`}
+      >
+      </div>
+    </div>
+  </article>
+</Layout>

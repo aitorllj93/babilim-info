@@ -1,0 +1,37 @@
+---
+
+import type {
+  AuthorContext,
+  DocumentContext,
+  NavigationContext,
+  PageContext,
+  TagsContext,
+} from "../types";
+
+import website from "../../website.config";
+
+import Entry from "../components/Entry.astro";
+import Layout from "../components/Layout.astro";
+import LeftSidebar from "../components/LeftSidebar.astro";
+import RightSidebar from "../components/RightSidebar.astro";
+import { isMytheme, getDocumentPageStaticPaths } from "../helpers/getProps";
+
+export type Props = {
+  author?: AuthorContext;
+  document: DocumentContext;
+  navigation: NavigationContext;
+  page: PageContext;
+  tags: TagsContext;
+};
+
+export const getStaticPaths = getDocumentPageStaticPaths;
+
+const { author, document, navigation, page, tags, } = Astro.props;
+
+---
+
+<Layout page={page} document={document}>
+  <LeftSidebar website={website} navigation={navigation} />
+  <Entry author={author} document={document} tags={tags} />
+  <RightSidebar showRelations={!isMytheme(document)} document={document} navigation={navigation} />
+</Layout>

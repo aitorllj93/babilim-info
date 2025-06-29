@@ -1,0 +1,19 @@
+---
+import website from "../../../website.config";
+
+import Layout from "../../components/Layout.astro";
+import LeftSidebar from "../../components/LeftSidebar.astro";
+import RightSidebar from "../../components/RightSidebar.astro";
+import TagEntry from "../../components/TagEntry.astro";
+import { getCulturePageStaticPaths } from "../../helpers/getProps";
+
+export const getStaticPaths = getCulturePageStaticPaths;
+
+const { entry, navigation, page } = Astro.props;
+---
+
+<Layout page={page}>
+  <LeftSidebar website={website} navigation={navigation} />
+  <TagEntry {...Astro.props} />
+  <RightSidebar showRelations={false} document={entry} navigation={navigation} />
+</Layout>
