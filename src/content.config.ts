@@ -2,7 +2,7 @@ import { ObsidianDocumentSchema, ObsidianMdLoader, ObsidianWikiLinkSchema, } fro
 import { glob } from "astro/loaders";
 import { defineCollection, z } from 'astro:content';
 
-import { AUTHORS_COLLECTION_NAME, DOCUMENTS_COLLECTION_NAME, TAGS_COLLECTION_NAME } from './constants';
+import { DOCUMENTS_COLLECTION_NAME, TAGS_COLLECTION_NAME } from './constants';
 
 export const collections = {
 	[DOCUMENTS_COLLECTION_NAME]: defineCollection({
@@ -43,15 +43,6 @@ export const collections = {
 			syncretics: ObsidianWikiLinkSchema.array().optional(),
 			references: z.string().array().optional(),
     }),
-	}),
-	[AUTHORS_COLLECTION_NAME]: defineCollection({
-		loader: glob({ pattern: "**/*.yml", base: "./src/content/authors" }),
-		schema:  ({ image }) => z.object({
-			name: z.string(),
-			avatar: image().optional(),
-			title: z.string().optional(),
-			description: z.string().optional(),
-		})
 	}),
 	[TAGS_COLLECTION_NAME]: defineCollection({
 		loader: glob({ pattern: "**/*.md", base: "./src/content/tags" }),
