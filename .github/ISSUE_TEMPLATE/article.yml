@@ -9,7 +9,7 @@ body:
       label: What section does this article belong to?
       options:
         - Gods
-        - Misteries
+        - Mysteries
         - Motifs
         - Mythemes
         - Cultures
