@@ -10,9 +10,23 @@ import LeftSidebar from "../components/LeftSidebar.astro";
 import { getHomePageStaticPaths } from "../helpers/getProps";
 
 const { props } = getHomePageStaticPaths();
+
+// Change Body background to this:
+// background: url(/_astro/Babylon.DS4eENje.jpg);
+//     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)), url(/_astro/Babylon.DS4eENje.jpg);
+//     background-position: center top;
+//     background-repeat: no-repeat;
+//     /* background-position: initial; */
+//     background-size: cover;
+// }
+
+// Change sidebards and search results to cristal effects (backdrops)
 ---
 
-<Layout scrollable page={props.page}>
+<Layout  backgroundImage={BabylonPicture} backgroundPosition={{
+  x: 25,
+  y: 50,
+}} scrollable page={props.page}>
   <LeftSidebar website={website} navigation={props.navigation} />
   <article
     class="flex flex-col gap-12 mt-24 rounded-4xl items-center grow-1 justify-center p-3 max-w-full"
@@ -24,7 +38,7 @@ const { props } = getHomePageStaticPaths();
         {website.title}
       </h1>
       <p
-        class="text-3xl font-heading text-paragraph-foreground dark:text-paragraph-foreground-dark"
+        class="text-3xl font-heading text-paragraph-foreground-dark"
       >
         {website.description}
       </p>
@@ -34,20 +48,6 @@ const { props } = getHomePageStaticPaths();
       className="pagefind-ui-main-search"
       uiOptions={{ autofocus: true, showImages: false, pageSize: 6 }}
     />
-    <!-- <Image src={BabylonPicture} alt="Babylon" class="rounded-full shadow-xl w-[50vh] aspect-square object-cover" /> -->
-    <div
-      class="w-full max-w-[720px] mx-auto h-48 md:h-[20rem] lg:h-[30rem] xl:h-[34rem] mb-4"
-    >
-      <div
-        class:list={[
-          `h-full w-full`,
-          `bg-cover bg-center bg-no-repeat mask-size-[100%_100%] mask-center mask-no-repeat mask-[url('../assets/scribble.png')]`,
-        ]}
-        style={`background-image: url('${BabylonPicture.src}')`}
-      >
-      </div>
-    </div>
-  </article>
   <!-- <RightSidebar navigation={{...{
     tree,
     backlinks: [],

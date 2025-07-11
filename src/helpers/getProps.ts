@@ -1,15 +1,13 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import Case from "case";
 
-import { AUTHORS_COLLECTION_NAME, DOCUMENTS_COLLECTION_NAME, TAGS_COLLECTION_NAME } from "../constants";
+import { DOCUMENTS_COLLECTION_NAME, TAGS_COLLECTION_NAME } from "../constants";
 import type { AuthorContext, DocumentContext, NavigationContext, Node, PageContext, TagsContext } from "../types";
 import { buildAuthor } from "./buildAuthor";
 import { buildDocPage, buildGodsIndexPage, buildIndexPage, buildMythemesIndexPage, buildTagPage, buildTagsIndexPage } from "./buildPage";
 import { buildTags, ignoreTags } from "./buildTags";
 import { buildTree } from "./buildTree";
-import { permalink } from "../../../astro-loader-obsidian/packages/astro-loader-obsidian/obsidian/fields";
 
-const authors = await getCollection(AUTHORS_COLLECTION_NAME);
 const allDocuments =(await getCollection(DOCUMENTS_COLLECTION_NAME)).filter(d => d.data.publish !== false);
 const documentTags = [...new Set(allDocuments.flatMap((d) => d.data.tags))].filter((t) => t && !ignoreTags.includes(t)) as string[];
 const definedTags = await getCollection(TAGS_COLLECTION_NAME);
@@ -448,10 +446,6 @@ export const getDocumentPageStaticPaths = () => {
       slug: document.data.slug ?? document.id,
     },
     props: {
-      author: buildAuthor(
-        document,
-        authors.find((a) => a.id === document.data.author)
-      ),
       document,
       navigation: {
         tree,
@@ -484,10 +478,6 @@ export const getMotifPageStaticPaths = () => {
         motif,
       },
       props: {
-        author: buildAuthor(
-          document,
-          authors.find((a) => a.id === document.data.author)
-        ),
         document,
         documents: gods,
         navigation: {

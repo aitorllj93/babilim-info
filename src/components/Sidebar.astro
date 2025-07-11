@@ -30,7 +30,7 @@ const rightArrowClass =
   <label
     for={id}
     class:list={[
-      "absolute top-[22px]  z-30 cursor-pointer bg-button-background dark:bg-button-background-dark rounded-full inline-block p-3 transition-all duration-500 peer-checked:rotate-180 ",
+      "absolute top-[22px]  z-30 cursor-pointer bg-button-background/70 dark:bg-button-background-dark/70 backdrop-blur-sm rounded-full inline-block p-3 transition-all duration-500 peer-checked:rotate-180 ",
       position === "left" ? leftArrowClass : rightArrowClass,
     ]}
   >
@@ -60,7 +60,7 @@ const rightArrowClass =
     class:list={[
       "fixed z-20 transition-all duration-500 transform peer-checked:translate-x-0 peer-checked:absolute lg:peer-checked:sticky",
       position === "left" ? leftSidebarClass : rightSidebarClass,
-      "rounded-xl py-8 px-2 h-full w-[80vw] lg:w-[15vw] bg-sidebar-background dark:bg-sidebar-background-dark shadow-lg",
+      "rounded-xl py-8 px-2 h-full w-[80vw] lg:w-[15vw] bg-sidebar-background/70 dark:bg-sidebar-background-dark/70 backdrop-blur-sm shadow-lg",
     ]}
   >
     <slot />

@@ -28,19 +28,20 @@ if (result.length > 4) {
   result.splice(4);
 }
 ---
-
-<div class="not-prose mt-8 lg:mt-16" data-pagefind-ignore>
-  <h2 class="font-heading text-text dark:text-text-dark text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-12">
-    You May Like
-  </h2>
-  <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
-    {
-      result.map((entry) => (
-        <ListItem
-          document={entry}
-          tags={[]}
-        />
-      ))
-    }
-  </ul>
-</div>
+{result?.length ? (
+  <div class="not-prose mt-8 lg:mt-16" data-pagefind-ignore>
+    <h2 class="font-heading text-text dark:text-text-dark text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-12">
+      You May Like
+    </h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
+      {
+        result.map((entry) => (
+          <ListItem
+            document={entry}
+            tags={[]}
+          />
+        ))
+      }
+    </ul>
+  </div>
+) : null}

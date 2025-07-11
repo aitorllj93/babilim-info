@@ -1,4 +1,5 @@
 ---
+import type { GetImageResult, ImageMetadata } from 'astro';
 import '../styles/global.css';
 
 import type { DocumentContext, PageContext } from '../types';
@@ -7,12 +8,18 @@ import Footer from './Footer.astro';
 import SEO from './SEO.astro';
 
 export type Props = {
+  backgroundImage?: GetImageResult|ImageMetadata;
+  backgroundPosition?: {
+    x?: number;
+    y?: number;
+  };
+  class?: string;
   page: PageContext
   document?: DocumentContext;
   scrollable?: boolean;
 }
 
-const { document, page, scrollable } = Astro.props;
+const { backgroundImage, backgroundPosition, class: className, document, page, scrollable } = Astro.props;
 
 const { language } = page;
 ---
@@ -33,8 +40,12 @@ const { language } = page;
   </head>
   <body class:list={[
     "w-full h-full bg-background dark:bg-background-dark",
-    scrollable ? 'overflow-x-hidden' : 'overflow-hidden'
-  ]}>
+    scrollable ? 'overflow-x-hidden' : 'overflow-hidden',
+    backgroundImage && `bg-no-repeat bg-cover bg-top-left bg-fixed`,
+    className,
+  ]} style={
+    `${backgroundImage ? `background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImage.src});` : ''}; ${backgroundPosition && `background-position: ${backgroundPosition.x}% ${backgroundPosition.y}%;`}`
+  }>
     <div class="bg-texture bg-texture-light dark:bg-texture-dark" />
     <main class="flex p-3 lg:p-6 lg:gap-6 items-start overflow-clip">
       <slot />

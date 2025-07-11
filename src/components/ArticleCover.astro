@@ -2,12 +2,13 @@
 import { getImage } from 'astro:assets';
 
 export type Props = {
+  displayType?: 'mask' | 'full';
   cover?: ImageMetadata;
   'cover-x'?: number;
   'cover-y'?: number;
 }
 
-const { cover, 'cover-x': coverX, 'cover-y': coverY } = Astro.props;
+const { cover, 'cover-x': coverX, 'cover-y': coverY, displayType = 'mask' } = Astro.props;
 
 const coverImage = cover ? (await getImage({
   src: cover,
@@ -20,7 +21,7 @@ const backgroundImage = coverImage ? `url('${coverImage.src}')` : undefined;
 
 ---
 {
-  coverImage && (
+  displayType === 'mask' && coverImage && (
     <link
       rel="preload"
       href={coverImage.src}
@@ -36,5 +37,21 @@ const backgroundImage = coverImage ? `url('${coverImage.src}')` : undefined;
           background-image: ${backgroundImage};`}
       />
     </div>
+  )
+}
+{
+  displayType === 'full' && coverImage && (
+    <link
+      rel="preload"
+      href={coverImage.src}
+      as="image"
+      fetchpriority="high" />
+      <div
+        class:list={[
+          `bg-cover bg-no-repeat h-[45vh] lg:h-[60vh] w-full`,
+        ]}
+        style={`
+          background-image: ${backgroundImage}; ${coverX && coverY && `background-position: ${coverX}% ${coverY}%;`}`}
+      />
   )
 }

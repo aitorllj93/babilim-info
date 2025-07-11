@@ -67,7 +67,7 @@
 
 @utility pagefind-ui-sidebar-search {
   .pagefind-ui__search-input, .pagefind-ui__search-clear, .pagefind-ui__button, .pagefind-ui__drawer {
-    @apply bg-sidebar-background! dark:bg-sidebar-background-dark!;
+    @apply bg-sidebar-background/70! dark:bg-sidebar-background-dark/70! backdrop-blur-md!;
   }
 
   .pagefind-ui__drawer {
@@ -83,8 +83,16 @@
 @utility pagefind-ui-main-search {
   @apply w-[90%]!;
 
-  .pagefind-ui__search-input, .pagefind-ui__search-clear, .pagefind-ui__button, .pagefind-ui__drawer {
-    @apply bg-background! dark:bg-background-dark!;
+  .pagefind-ui__search-clear {
+    @apply bg-transparent!;
+  }
+
+  .pagefind-ui__search-input, .pagefind-ui__button, .pagefind-ui__drawer {
+    @apply bg-background/70! dark:bg-background-dark/70! backdrop-blur-md!;
+  }
+
+  .pagefind-ui__drawer {
+    @apply mt-2! rounded-lg! p-2!;
   }
 
   .pagefind-ui__results {
