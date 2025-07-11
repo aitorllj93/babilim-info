@@ -47,9 +47,9 @@ const { language } = page;
     `${backgroundImage ? `background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImage.src});` : ''}; ${backgroundPosition && `background-position: ${backgroundPosition.x}% ${backgroundPosition.y}%;`}`
   }>
     <div class="bg-texture bg-texture-light dark:bg-texture-dark" />
-    <main class="flex p-3 lg:p-6 lg:gap-6 items-start overflow-clip">
+    <main class="flex sm:p-3 lg:p-6 lg:gap-6 items-start overflow-clip">
       <slot />
     </main>
-    <Footer document={document}  />
+    <!-- <Footer document={document}  /> -->
   </body>
 </html>

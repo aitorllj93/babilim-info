@@ -6,7 +6,7 @@ export type Props = {
 
 const { class: className, indexable } = Astro.props;
 
-const baseClassName = " overflow-x-hidden overflow-y-auto scrollbar-thin h-[calc(100dvh_-_30px)] lg:h-[calc(100dvh_-_48px)] p-4 lg:p-8 bg-article-background/70 dark:bg-article-background-dark/70 backdrop-blur-sm rounded-xl grow-1  max-w-full shadow-lg mb-6";
+const baseClassName = " overflow-x-hidden overflow-y-auto scrollbar-thin h-[100dvh] sm:h-[calc(100dvh_-_30px)] lg:h-[calc(100dvh_-_48px)] p-4 lg:p-8 bg-article-background/70 dark:bg-article-background-dark/70 backdrop-blur-sm sm:rounded-xl grow-1  max-w-full shadow-lg mb-6";
 
 const paragraphClassName = "text-paragraph-foreground dark:text-paragraph-foreground-dark prose-p:font-paragraph";
 const blockquoteClassName = "prose-blockquote:border-text dark:prose-blockquote:border-text-dark prose-blockquote:text-blockquote-foreground dark:prose-blockquote:text-blockquote-foreground-dark";
