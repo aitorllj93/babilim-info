@@ -17,13 +17,13 @@ export type Props = {
 const { id, document, navigation, showToC = true, showLinks = true, showRelations = true } = Astro.props;
 
 const gridTemplates = {
-  "[grid-template-areas:'tab1_tab2_tab3''tabcontent_tabcontent_tabcontent']": showToC && showLinks && showRelations,
-  "[grid-template-areas:'a_tab2_tab3''a_tabcontent_tabcontent']": !showToC && showLinks && showRelations,
-  "[grid-template-areas:'a_b_tab3''a_b_tabcontent']": !showToC && !showLinks && showRelations,
+  "[grid-template-areas:'tab1_tab2_tab3''tabcontent_tabcontent_tabcontent'] grid-cols-3": showToC && showLinks && showRelations,
+  "[grid-template-areas:'a_tab2_tab3''a_tabcontent_tabcontent'] grid-cols-2": !showToC && showLinks && showRelations,
+  "[grid-template-areas:'a_b_tab3''a_b_tabcontent'] grid-cols-1": !showToC && !showLinks && showRelations,
   "[grid-template-areas:'a_b_c''a_b_c']": !showToC && !showLinks && !showRelations,
-  "[grid-template-areas:'tab1_b_tab3''tabcontent_b_tabcontent']": showToC && !showLinks && showRelations,
-  "[grid-template-areas:'tab1_b_c''tabcontent_b_c']": showToC && !showLinks && !showRelations,
-  "[grid-template-areas:'tab1_tab2''tabcontent_tabcontent']": showToC && showLinks && !showRelations,
+  "[grid-template-areas:'tab1_b_tab3''tabcontent_b_tabcontent'] grid-cols-2": showToC && !showLinks && showRelations,
+  "[grid-template-areas:'tab1_b_c''tabcontent_b_c'] grid-cols-1": showToC && !showLinks && !showRelations,
+  "[grid-template-areas:'tab1_tab2''tabcontent_tabcontent'] grid-cols-2": showToC && showLinks && !showRelations,
 };
 
 const template = Object.entries(gridTemplates).find(([k, v]) => v === true)?.[0];
@@ -45,7 +45,7 @@ const template = Object.entries(gridTemplates).find(([k, v]) => v === true)?.[0]
   />
   <label
     for={`${id}-tab-one`}
-    class="[grid-area:tab1] bg-tab-background dark:bg-tab-background-dark text-text dark:text-text-dark border-tab-active-border dark:border-tab-active-border-dark border-b hover:border-b-0 hover:border hover:bg-tab-active-background dark:hover:bg-tab-active-background-dark peer-checked/tab-one:border peer-checked/tab-one:border-b-0 peer-checked/tab-one:bg-tab-active-background dark:peer-checked/tab-one:bg-tab-active-background-dark cursor-pointer p-2 rounded-t-lg flex truncate"
+    class="[grid-area:tab1] bg-white/0 text-text dark:text-text-dark border-tab-active-border dark:border-tab-active-border-dark border-b hover:border-b-0 hover:border hover:bg-tab-active-background dark:hover:bg-tab-active-background-dark peer-checked/tab-one:border peer-checked/tab-one:border-b-0 peer-checked/tab-one:bg-tab-active-background dark:peer-checked/tab-one:bg-tab-active-background-dark cursor-pointer p-2 rounded-t-lg flex truncate"
     title="Outline"
     ><svg
       xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ const template = Object.entries(gridTemplates).find(([k, v]) => v === true)?.[0]
   />
   <label
     for={`${id}-tab-two`}
-    class="[grid-area:tab2] bg-tab-background dark:bg-tab-background-dark text-text dark:text-text-dark border-tab-active-border dark:border-tab-active-border-dark border-b hover:border-b-0 hover:border hover:bg-tab-active-background dark:hover:bg-tab-active-background-dark peer-checked/tab-two:border peer-checked/tab-two:border-b-0 peer-checked/tab-two:bg-tab-active-background dark:peer-checked/tab-two:bg-tab-active-background-dark cursor-pointer p-2 rounded-t-lg flex"
+    class="[grid-area:tab2] bg-white/0 text-text dark:text-text-dark border-tab-active-border dark:border-tab-active-border-dark border-b hover:border-b-0 hover:border hover:bg-tab-active-background dark:hover:bg-tab-active-background-dark peer-checked/tab-two:border peer-checked/tab-two:border-b-0 peer-checked/tab-two:bg-tab-active-background dark:peer-checked/tab-two:bg-tab-active-background-dark cursor-pointer p-2 rounded-t-lg flex"
     title="Links"
   >
     <svg
@@ -97,7 +97,7 @@ const template = Object.entries(gridTemplates).find(([k, v]) => v === true)?.[0]
   />
   <label
     for={`${id}-tab-three`}
-    class="[grid-area:tab3] bg-tab-background dark:bg-tab-background-dark text-text dark:text-text-dark border-tab-active-border dark:border-tab-active-border-dark border-b hover:border-b-0 hover:border hover:bg-tab-active-background dark:hover:bg-tab-active-background-dark peer-checked/tab-three:border peer-checked/tab-three:border-b-0 peer-checked/tab-three:bg-tab-active-background dark:peer-checked/tab-three:bg-tab-active-background-dark cursor-pointer p-2 rounded-t-lg flex"
+    class="[grid-area:tab3] bg-white/0 text-text dark:text-text-dark border-tab-active-border dark:border-tab-active-border-dark border-b hover:border-b-0 hover:border hover:bg-tab-active-background dark:hover:bg-tab-active-background-dark peer-checked/tab-three:border peer-checked/tab-three:border-b-0 peer-checked/tab-three:bg-tab-active-background dark:peer-checked/tab-three:bg-tab-active-background-dark cursor-pointer p-2 rounded-t-lg flex"
     title="Graph"
   >
     <svg
