@@ -1,0 +1,599 @@
+{
+  "type": "FeatureCollection",
+  "name": "thracian",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                21.767230137004,
+                41.0940345951044
+              ],
+              [
+                21.5349824426121,
+                41.7926068855481
+              ],
+              [
+                19.0123166925241,
+                44.9456994349004
+              ],
+              [
+                20.2459431293717,
+                45.8849173454318
+              ],
+              [
+                21.6190713009483,
+                45.2898550887666
+              ],
+              [
+                23.2335773810046,
+                43.9492309924889
+              ],
+              [
+                25.5544298710855,
+                44.0943498641002
+              ],
+              [
+                26.9671226911347,
+                44.814614629668
+              ],
+              [
+                28.7628646392103,
+                44.5797648345321
+              ],
+              [
+                28.6862478585079,
+                44.4880519735402
+              ],
+              [
+                28.5731134743526,
+                44.1978221761769
+              ],
+              [
+                28.5298853249385,
+                43.8434711324758
+              ],
+              [
+                28.5101061196163,
+                43.743075929839
+              ],
+              [
+                28.4805384011104,
+                43.5922847616261
+              ],
+              [
+                28.4456930489376,
+                43.4763637411183
+              ],
+              [
+                28.3280954689815,
+                43.437526308257
+              ],
+              [
+                28.1870584816768,
+                43.4501186239308
+              ],
+              [
+                28.0346384377315,
+                43.3919025289601
+              ],
+              [
+                27.887320551379,
+                43.0635257589406
+              ],
+              [
+                27.86990836571,
+                42.7998767721242
+              ],
+              [
+                27.8361635536983,
+                42.7355228292531
+              ],
+              [
+                27.6540441841915,
+                42.6837383138722
+              ],
+              [
+                27.5019502968624,
+                42.5163455831594
+              ],
+              [
+                27.4947023720577,
+                42.4009013998097
+              ],
+              [
+                27.6078710884884,
+                42.4167781698293
+              ],
+              [
+                27.7225332588985,
+                42.3162151205129
+              ],
+              [
+                27.7377100319698,
+                42.2470012533254
+              ],
+              [
+                27.91340735863,
+                42.0781017171926
+              ],
+              [
+                27.9179525704219,
+                41.9776721822804
+              ],
+              [
+                28.0262022347286,
+                41.8823848592824
+              ],
+              [
+                28.0181780190303,
+                41.7532077657765
+              ],
+              [
+                28.0698385567501,
+                41.624969087798
+              ],
+              [
+                28.104397806628,
+                41.592971407134
+              ],
+              [
+                28.3714571327999,
+                41.4331279623097
+              ],
+              [
+                28.7402220101192,
+                41.3248287069386
+              ],
+              [
+                29.0123682350948,
+                41.2548328268117
+              ],
+              [
+                29.0810995430782,
+                41.2005115377492
+              ],
+              [
+                28.9644537300899,
+                40.9892383443898
+              ],
+              [
+                28.827807459338,
+                40.9146991598195
+              ],
+              [
+                28.5961504311397,
+                40.9469867574758
+              ],
+              [
+                28.1733141274288,
+                41.0578952657765
+              ],
+              [
+                28.0263681740596,
+                41.026206575591
+              ],
+              [
+                27.9321832985714,
+                40.9575496542043
+              ],
+              [
+                27.4741697640255,
+                40.9628330099172
+              ],
+              [
+                27.3130464882686,
+                40.7899127828664
+              ],
+              [
+                27.2637567848995,
+                40.6671710836476
+              ],
+              [
+                26.8889265389278,
+                40.5246768819875
+              ],
+              [
+                26.6135721535518,
+                40.3980403768605
+              ],
+              [
+                26.5139398903682,
+                40.2819743978566
+              ],
+              [
+                26.3758631081417,
+                40.2134090292043
+              ],
+              [
+                26.2551584572628,
+                40.0815616476125
+              ],
+              [
+                26.1408853859737,
+                40.0446544515676
+              ],
+              [
+                26.2142896981075,
+                40.1606670248097
+              ],
+              [
+                26.2227964730098,
+                40.2239566671437
+              ],
+              [
+                26.1948213906124,
+                40.3030734884328
+              ],
+              [
+                26.4575453133419,
+                40.4349742757863
+              ],
+              [
+                26.5564775795772,
+                40.4982906210011
+              ],
+              [
+                26.4548387856319,
+                40.5843082296437
+              ],
+              [
+                26.418061289294,
+                40.5778232442922
+              ],
+              [
+                26.1240415901973,
+                40.6028476583547
+              ],
+              [
+                26.0207243294551,
+                40.6693225729054
+              ],
+              [
+                25.9928751320675,
+                40.8524585592336
+              ],
+              [
+                25.635705027087,
+                40.8773761617726
+              ],
+              [
+                25.3011141152217,
+                40.8959422933644
+              ],
+              [
+                25.0463171334102,
+                40.9522739278859
+              ],
+              [
+                25.0189295143917,
+                41.0171466695851
+              ],
+              [
+                24.8121157021358,
+                40.9334216939992
+              ],
+              [
+                24.7006635994747,
+                40.8783412801808
+              ],
+              [
+                24.6203924798156,
+                40.8760084695546
+              ],
+              [
+                24.2258259093726,
+                41.3143668575638
+              ],
+              [
+                22.0395155926297,
+                41.2638200564297
+              ],
+              [
+                21.767230137004,
+                41.0940345951044
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "NAME": "Thrace",
+        "ABBREVN": null,
+        "SUBJECTO": "Thrace",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Thrace",
+        "stroke": "#34495E"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.947628878988,
+          42.5997694676332
+        ]
+      },
+      "properties": {
+        "NAME": "Thrace",
+        "ABBREVN": null,
+        "SUBJECTO": "Thrace",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Thrace",
+        "stroke": "#34495E",
+        "AREA": 255909548727.981
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Plovdiv",
+        "inhabitedSince": -7000,
+        "inhabitedUntil": null,
+        "name_local": "ΟΔΡΥΣΣΑ",
+        "civilizations": null,
+        "wikipedia": null,
+        "wikidata": null,
+        "link": null,
+        "desc": null,
+        "name.no": null,
+        "name.id": null,
+        "name.eo": null,
+        "name.bg": null,
+        "name.be": null,
+        "old_name": null,
+        "religion": null,
+        "denomination": null,
+        "name.ckb": null,
+        "description.hu": null,
+        "wiki.en": null,
+        "name.zh": null,
+        "inscription": null,
+        "historic.period": null,
+        "name.ka": null,
+        "description.de": null,
+        "name.ko": null,
+        "name.he3": null,
+        "url": null,
+        "access": null,
+        "layer": null,
+        "addr.city": null,
+        "name.ku": null,
+        "alt_name.ar": null,
+        "name.la": null,
+        "alt_name.el": null,
+        "website1": null,
+        "whc.inscription_date": null,
+        "whc.criteria": null,
+        "ref.whc": null,
+        "designation": null,
+        "name.ml": null,
+        "name.he1": null,
+        "name.ro": null,
+        "image_2": null,
+        "image_1": null,
+        "reference": null,
+        "name.hy": null,
+        "man_made": null,
+        "description.en": null,
+        "place": null,
+        "name.vi": null,
+        "name.tr": null,
+        "name.sl": null,
+        "name.pl": null,
+        "name.nl": null,
+        "name.mn": null,
+        "name.ja": null,
+        "name.fi": null,
+        "int_name": null,
+        "mapillary": null,
+        "alt_name.he": null,
+        "alt_name.en": null,
+        "name.hu": null,
+        "heritage": null,
+        "name.lt": null,
+        "historic.era": null,
+        "old_name.fr": null,
+        "image6": null,
+        "image5": null,
+        "image4": null,
+        "image2": null,
+        "wikipedia.en": null,
+        "start_date": null,
+        "site_type": null,
+        "short_name.cs": null,
+        "name.uk": null,
+        "name.sr": null,
+        "name.pt": null,
+        "name.it": null,
+        "name.es": null,
+        "name.ca": null,
+        "name.br": null,
+        "historic.civilization": null,
+        "alt_name.cs": null,
+        "name.en6": null,
+        "name.en5": null,
+        "name.he2": null,
+        "website": null,
+        "name.cs": null,
+        "name.en4": null,
+        "name.en3": null,
+        "natural": null,
+        "ele": null,
+        "name.ar1": null,
+        "name.en2": null,
+        "name.en1": null,
+        "image3": null,
+        "image1": null,
+        "image": null,
+        "description.he": null,
+        "description": null,
+        "name.fr": null,
+        "name.ar": null,
+        "name.he": null,
+        "name.en": null,
+        "name.ru": null,
+        "name.de": null,
+        "is_in": null,
+        "name.el": null,
+        "alt_name": null,
+        "name.pa": null,
+        "name.mr": null,
+        "name.kn": null,
+        "name.hi": null,
+        "name.gu": null,
+        "name.bn": null,
+        "wpt_description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.7485198475225,
+          42.15
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Niš",
+        "inhabitedSince": -5000,
+        "inhabitedUntil": null,
+        "name_local": null,
+        "civilizations": null,
+        "wikipedia": null,
+        "wikidata": null,
+        "link": null,
+        "desc": null,
+        "name.no": null,
+        "name.id": null,
+        "name.eo": null,
+        "name.bg": null,
+        "name.be": null,
+        "old_name": null,
+        "religion": null,
+        "denomination": null,
+        "name.ckb": null,
+        "description.hu": null,
+        "wiki.en": null,
+        "name.zh": null,
+        "inscription": null,
+        "historic.period": null,
+        "name.ka": null,
+        "description.de": null,
+        "name.ko": null,
+        "name.he3": null,
+        "url": null,
+        "access": null,
+        "layer": null,
+        "addr.city": null,
+        "name.ku": null,
+        "alt_name.ar": null,
+        "name.la": null,
+        "alt_name.el": null,
+        "website1": null,
+        "whc.inscription_date": null,
+        "whc.criteria": null,
+        "ref.whc": null,
+        "designation": null,
+        "name.ml": null,
+        "name.he1": null,
+        "name.ro": null,
+        "image_2": null,
+        "image_1": null,
+        "reference": null,
+        "name.hy": null,
+        "man_made": null,
+        "description.en": null,
+        "place": null,
+        "name.vi": null,
+        "name.tr": null,
+        "name.sl": null,
+        "name.pl": null,
+        "name.nl": null,
+        "name.mn": null,
+        "name.ja": null,
+        "name.fi": null,
+        "int_name": null,
+        "mapillary": null,
+        "alt_name.he": null,
+        "alt_name.en": null,
+        "name.hu": null,
+        "heritage": null,
+        "name.lt": null,
+        "historic.era": null,
+        "old_name.fr": null,
+        "image6": null,
+        "image5": null,
+        "image4": null,
+        "image2": null,
+        "wikipedia.en": null,
+        "start_date": null,
+        "site_type": null,
+        "short_name.cs": null,
+        "name.uk": null,
+        "name.sr": null,
+        "name.pt": null,
+        "name.it": null,
+        "name.es": null,
+        "name.ca": null,
+        "name.br": null,
+        "historic.civilization": null,
+        "alt_name.cs": null,
+        "name.en6": null,
+        "name.en5": null,
+        "name.he2": null,
+        "website": null,
+        "name.cs": null,
+        "name.en4": null,
+        "name.en3": null,
+        "natural": null,
+        "ele": null,
+        "name.ar1": null,
+        "name.en2": null,
+        "name.en1": null,
+        "image3": null,
+        "image1": null,
+        "image": null,
+        "description.he": null,
+        "description": null,
+        "name.fr": null,
+        "name.ar": null,
+        "name.he": null,
+        "name.en": null,
+        "name.ru": null,
+        "name.de": null,
+        "is_in": null,
+        "name.el": null,
+        "alt_name": null,
+        "name.pa": null,
+        "name.mr": null,
+        "name.kn": null,
+        "name.hi": null,
+        "name.gu": null,
+        "name.bn": null,
+        "wpt_description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.8972623254399,
+          43.3193133508043
+        ]
+      }
+    }
+  ]
+}

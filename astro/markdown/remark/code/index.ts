@@ -3,10 +3,12 @@
 import type { Text } from "hast";
 import { spoiler } from "./spoiler";
 import { timeline } from "./timeline";
+import { leaflet } from "./leaflet";
 
 const transformers = {
   'spoiler-markdown': spoiler,
   'timeline-labeled': timeline,
+  'leaflet': leaflet,
 } as const;
 
 

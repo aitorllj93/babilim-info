@@ -1,0 +1,1344 @@
+{
+  "type": "FeatureCollection",
+  "name": "hittite",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                38.8097690574398,
+                36.76671755094
+              ],
+              [
+                38.4181029807589,
+                36.1487825540436
+              ],
+              [
+                38.3210179127462,
+                36.1811442433812
+              ],
+              [
+                38.0035793696749,
+                36.2869570910716
+              ],
+              [
+                37.7496285352179,
+                36.2869570910716
+              ],
+              [
+                37.008938601385,
+                35.9695185480004
+              ],
+              [
+                36.5645246410852,
+                35.7155677135434
+              ],
+              [
+                36.4587117933948,
+                35.3346414618578
+              ],
+              [
+                36.4375492238567,
+                34.6574392366391
+              ],
+              [
+                36.3105738066282,
+                34.3611632631059
+              ],
+              [
+                35.4640710251048,
+                33.4300102034302
+              ],
+              [
+                35.1323118538692,
+                33.2315173971242
+              ],
+              [
+                35.2083883614376,
+                33.3335872518605
+              ],
+              [
+                35.3560896248653,
+                33.6397815572804
+              ],
+              [
+                35.348559412463,
+                33.744468294341
+              ],
+              [
+                35.4298658699825,
+                33.744468294341
+              ],
+              [
+                35.4918508858516,
+                33.8308254110402
+              ],
+              [
+                35.5244016976192,
+                33.9747691976613
+              ],
+              [
+                35.5320806832149,
+                34.1187053548879
+              ],
+              [
+                35.7162084908321,
+                34.3123699056691
+              ],
+              [
+                35.8210058541134,
+                34.343776308257
+              ],
+              [
+                35.8730650276973,
+                34.4222865926808
+              ],
+              [
+                35.8519163460567,
+                34.492946230132
+              ],
+              [
+                35.7507543892696,
+                34.7468067037648
+              ],
+              [
+                35.8088522286251,
+                35.0137973653859
+              ],
+              [
+                35.8413801522091,
+                35.0426326620168
+              ],
+              [
+                35.7964315743282,
+                35.2707172262258
+              ],
+              [
+                35.6073408455684,
+                35.4175449239797
+              ],
+              [
+                35.6639585823848,
+                35.4594951498097
+              ],
+              [
+                35.6804304451778,
+                35.527671419341
+              ],
+              [
+                35.7331762642696,
+                35.585361086089
+              ],
+              [
+                35.6914320320919,
+                35.6850200521535
+              ],
+              [
+                35.7395048470333,
+                35.6902652608937
+              ],
+              [
+                35.8559446663692,
+                35.8345027792043
+              ],
+              [
+                35.8290510506466,
+                35.8847843038625
+              ],
+              [
+                35.718504938586,
+                36.0915561544484
+              ],
+              [
+                35.6649465889766,
+                36.1335292684621
+              ],
+              [
+                35.7086325020626,
+                36.2122341024465
+              ],
+              [
+                35.8141377527435,
+                36.2984918988042
+              ],
+              [
+                35.8172407479122,
+                36.3010288106984
+              ],
+              [
+                36.0952635140255,
+                36.4824634420461
+              ],
+              [
+                36.1045217842891,
+                36.5611720907277
+              ],
+              [
+                36.0824308724239,
+                36.6215320455617
+              ],
+              [
+                35.9567938179805,
+                36.7474933492726
+              ],
+              [
+                35.8908758492305,
+                36.7711139547414
+              ],
+              [
+                35.6717405648067,
+                36.6057849752492
+              ],
+              [
+                35.5676145882442,
+                36.5874172079152
+              ],
+              [
+                35.5061712593868,
+                36.5585552084035
+              ],
+              [
+                35.5476026863887,
+                36.5401836263722
+              ],
+              [
+                35.4945898384884,
+                36.4430995809621
+              ],
+              [
+                35.4170828194454,
+                36.4326053487844
+              ],
+              [
+                35.3886976570919,
+                36.4535938131398
+              ],
+              [
+                35.3541784615352,
+                36.4142375814504
+              ],
+              [
+                35.2205267281368,
+                36.3880039083547
+              ],
+              [
+                35.0713720650509,
+                36.4877086507863
+              ],
+              [
+                34.8699102730587,
+                36.5769229757375
+              ],
+              [
+                34.6623831124141,
+                36.6477733480519
+              ],
+              [
+                34.4851293892696,
+                36.6267810689992
+              ],
+              [
+                34.1032209725216,
+                36.380324922759
+              ],
+              [
+                33.9517126412227,
+                36.2515788900441
+              ],
+              [
+                33.9540548653438,
+                36.1597591268605
+              ],
+              [
+                33.890982660754,
+                36.1387744772023
+              ],
+              [
+                33.8358755440548,
+                36.1072955953664
+              ],
+              [
+                33.8336973519161,
+                36.0705715047902
+              ],
+              [
+                33.7531767220333,
+                36.146640382964
+              ],
+              [
+                33.4816999764278,
+                36.054282747466
+              ],
+              [
+                33.1713362068966,
+                35.9708820211476
+              ],
+              [
+                32.9041166634395,
+                35.9766956197804
+              ],
+              [
+                32.6403417916134,
+                36.0079990255422
+              ],
+              [
+                32.3349790901973,
+                36.1283679830617
+              ],
+              [
+                31.9020071358516,
+                36.4968639242238
+              ],
+              [
+                31.3706903786495,
+                36.7123447286672
+              ],
+              [
+                30.9053106636837,
+                36.794215761382
+              ],
+              [
+                30.5935907692745,
+                36.7617336141652
+              ],
+              [
+                30.5597767830876,
+                37.5657190014605
+              ],
+              [
+                31.0830317716816,
+                39.004670220094
+              ],
+              [
+                31.9987280017211,
+                40.0511801972819
+              ],
+              [
+                35.6778555245235,
+                41.620933138091
+              ],
+              [
+                35.9577932686641,
+                41.6856456625051
+              ],
+              [
+                36.1613684029415,
+                41.3525005209035
+              ],
+              [
+                36.3828955025509,
+                41.237517915923
+              ],
+              [
+                36.6412458748653,
+                41.3149829732961
+              ],
+              [
+                36.8170118660762,
+                41.2896839010304
+              ],
+              [
+                37.2528257698848,
+                41.0277210104054
+              ],
+              [
+                37.8218412728145,
+                41.0096317159719
+              ],
+              [
+                38.313963922961,
+                40.9209018575734
+              ],
+              [
+                38.6511831612423,
+                40.9215694295949
+              ],
+              [
+                39.1386442513302,
+                41.0443187582082
+              ],
+              [
+                39.3701773018673,
+                41.0639987814015
+              ],
+              [
+                39.6630049080684,
+                41.0004955160207
+              ],
+              [
+                40.0067129463985,
+                40.9563289510793
+              ],
+              [
+                40.3610143990352,
+                40.9634433614797
+              ],
+              [
+                40.4588202356642,
+                40.9888235278469
+              ],
+              [
+                41.1781397499637,
+                39.8971917246661
+              ],
+              [
+                39.7654469299145,
+                38.2786695267018
+              ],
+              [
+                38.3527541098652,
+                36.7311512775795
+              ],
+              [
+                38.8097690574398,
+                36.76671755094
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "NAME": "Hittites",
+        "ABBREVN": null,
+        "SUBJECTO": "Hittites",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Hittites",
+        "stroke": "#F8D7DA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.3152239323643,
+          39.0437305795735
+        ]
+      },
+      "properties": {
+        "NAME": "Hittites",
+        "ABBREVN": null,
+        "SUBJECTO": "Hittites",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Hittites",
+        "stroke": "#F8D7DA",
+        "AREA": 413140387559.228
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ankara",
+        "inhabitedSince": -2000,
+        "inhabitedUntil": null,
+        "name_local": null,
+        "civilizations": null,
+        "wikipedia": null,
+        "wikidata": null,
+        "link": null,
+        "desc": null,
+        "name.no": null,
+        "name.id": null,
+        "name.eo": null,
+        "name.bg": null,
+        "name.be": null,
+        "old_name": null,
+        "religion": null,
+        "denomination": null,
+        "name.ckb": null,
+        "description.hu": null,
+        "wiki.en": null,
+        "name.zh": null,
+        "inscription": null,
+        "historic.period": null,
+        "name.ka": null,
+        "description.de": null,
+        "name.ko": null,
+        "name.he3": null,
+        "url": null,
+        "access": null,
+        "layer": null,
+        "addr.city": null,
+        "name.ku": null,
+        "alt_name.ar": null,
+        "name.la": null,
+        "alt_name.el": null,
+        "website1": null,
+        "whc.inscription_date": null,
+        "whc.criteria": null,
+        "ref.whc": null,
+        "designation": null,
+        "name.ml": null,
+        "name.he1": null,
+        "name.ro": null,
+        "image_2": null,
+        "image_1": null,
+        "reference": null,
+        "name.hy": null,
+        "man_made": null,
+        "description.en": null,
+        "place": null,
+        "name.vi": null,
+        "name.tr": null,
+        "name.sl": null,
+        "name.pl": null,
+        "name.nl": null,
+        "name.mn": null,
+        "name.ja": null,
+        "name.fi": null,
+        "int_name": null,
+        "mapillary": null,
+        "alt_name.he": null,
+        "alt_name.en": null,
+        "name.hu": null,
+        "heritage": null,
+        "name.lt": null,
+        "historic.era": null,
+        "old_name.fr": null,
+        "image6": null,
+        "image5": null,
+        "image4": null,
+        "image2": null,
+        "wikipedia.en": null,
+        "start_date": null,
+        "site_type": null,
+        "short_name.cs": null,
+        "name.uk": null,
+        "name.sr": null,
+        "name.pt": null,
+        "name.it": null,
+        "name.es": null,
+        "name.ca": null,
+        "name.br": null,
+        "historic.civilization": null,
+        "alt_name.cs": null,
+        "name.en6": null,
+        "name.en5": null,
+        "name.he2": null,
+        "website": null,
+        "name.cs": null,
+        "name.en4": null,
+        "name.en3": null,
+        "natural": null,
+        "ele": null,
+        "name.ar1": null,
+        "name.en2": null,
+        "name.en1": null,
+        "image3": null,
+        "image1": null,
+        "image": null,
+        "description.he": null,
+        "description": null,
+        "name.fr": null,
+        "name.ar": null,
+        "name.he": null,
+        "name.en": null,
+        "name.ru": null,
+        "name.de": null,
+        "is_in": null,
+        "name.el": null,
+        "alt_name": null,
+        "name.pa": null,
+        "name.mr": null,
+        "name.kn": null,
+        "name.hi": null,
+        "name.gu": null,
+        "name.bn": null,
+        "wpt_description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8502043884792,
+          39.9165475739688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kaneš",
+        "inhabitedSince": -2254,
+        "inhabitedUntil": null,
+        "name_local": null,
+        "civilizations": null,
+        "wikipedia": null,
+        "wikidata": null,
+        "link": null,
+        "desc": null,
+        "name.no": null,
+        "name.id": null,
+        "name.eo": null,
+        "name.bg": null,
+        "name.be": null,
+        "old_name": null,
+        "religion": null,
+        "denomination": null,
+        "name.ckb": null,
+        "description.hu": null,
+        "wiki.en": null,
+        "name.zh": null,
+        "inscription": null,
+        "historic.period": null,
+        "name.ka": null,
+        "description.de": null,
+        "name.ko": null,
+        "name.he3": null,
+        "url": null,
+        "access": null,
+        "layer": null,
+        "addr.city": null,
+        "name.ku": null,
+        "alt_name.ar": null,
+        "name.la": null,
+        "alt_name.el": null,
+        "website1": null,
+        "whc.inscription_date": null,
+        "whc.criteria": null,
+        "ref.whc": null,
+        "designation": null,
+        "name.ml": null,
+        "name.he1": null,
+        "name.ro": null,
+        "image_2": null,
+        "image_1": null,
+        "reference": null,
+        "name.hy": null,
+        "man_made": null,
+        "description.en": null,
+        "place": null,
+        "name.vi": null,
+        "name.tr": null,
+        "name.sl": null,
+        "name.pl": null,
+        "name.nl": null,
+        "name.mn": null,
+        "name.ja": null,
+        "name.fi": null,
+        "int_name": null,
+        "mapillary": null,
+        "alt_name.he": null,
+        "alt_name.en": null,
+        "name.hu": null,
+        "heritage": null,
+        "name.lt": null,
+        "historic.era": null,
+        "old_name.fr": null,
+        "image6": null,
+        "image5": null,
+        "image4": null,
+        "image2": null,
+        "wikipedia.en": null,
+        "start_date": null,
+        "site_type": null,
+        "short_name.cs": null,
+        "name.uk": null,
+        "name.sr": null,
+        "name.pt": null,
+        "name.it": null,
+        "name.es": null,
+        "name.ca": null,
+        "name.br": null,
+        "historic.civilization": null,
+        "alt_name.cs": null,
+        "name.en6": null,
+        "name.en5": null,
+        "name.he2": null,
+        "website": null,
+        "name.cs": null,
+        "name.en4": null,
+        "name.en3": null,
+        "natural": null,
+        "ele": null,
+        "name.ar1": null,
+        "name.en2": null,
+        "name.en1": null,
+        "image3": null,
+        "image1": null,
+        "image": null,
+        "description.he": null,
+        "description": null,
+        "name.fr": null,
+        "name.ar": null,
+        "name.he": null,
+        "name.en": null,
+        "name.ru": null,
+        "name.de": null,
+        "is_in": null,
+        "name.el": null,
+        "alt_name": null,
+        "name.pa": null,
+        "name.mr": null,
+        "name.kn": null,
+        "name.hi": null,
+        "name.gu": null,
+        "name.bn": null,
+        "wpt_description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.633333,
+          38.8496189098145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Çatal Höyük",
+        "inhabitedSince": -8000,
+        "inhabitedUntil": null,
+        "name_local": null,
+        "civilizations": null,
+        "wikipedia": null,
+        "wikidata": null,
+        "link": null,
+        "desc": null,
+        "name.no": null,
+        "name.id": null,
+        "name.eo": null,
+        "name.bg": null,
+        "name.be": null,
+        "old_name": null,
+        "religion": null,
+        "denomination": null,
+        "name.ckb": null,
+        "description.hu": null,
+        "wiki.en": null,
+        "name.zh": null,
+        "inscription": null,
+        "historic.period": null,
+        "name.ka": null,
+        "description.de": null,
+        "name.ko": null,
+        "name.he3": null,
+        "url": null,
+        "access": null,
+        "layer": null,
+        "addr.city": null,
+        "name.ku": null,
+        "alt_name.ar": null,
+        "name.la": null,
+        "alt_name.el": null,
+        "website1": null,
+        "whc.inscription_date": null,
+        "whc.criteria": null,
+        "ref.whc": null,
+        "designation": null,
+        "name.ml": null,
+        "name.he1": null,
+        "name.ro": null,
+        "image_2": null,
+        "image_1": null,
+        "reference": null,
+        "name.hy": null,
+        "man_made": null,
+        "description.en": null,
+        "place": null,
+        "name.vi": null,
+        "name.tr": null,
+        "name.sl": null,
+        "name.pl": null,
+        "name.nl": null,
+        "name.mn": null,
+        "name.ja": null,
+        "name.fi": null,
+        "int_name": null,
+        "mapillary": null,
+        "alt_name.he": null,
+        "alt_name.en": null,
+        "name.hu": null,
+        "heritage": null,
+        "name.lt": null,
+        "historic.era": null,
+        "old_name.fr": null,
+        "image6": null,
+        "image5": null,
+        "image4": null,
+        "image2": null,
+        "wikipedia.en": null,
+        "start_date": null,
+        "site_type": null,
+        "short_name.cs": null,
+        "name.uk": null,
+        "name.sr": null,
+        "name.pt": null,
+        "name.it": null,
+        "name.es": null,
+        "name.ca": null,
+        "name.br": null,
+        "historic.civilization": null,
+        "alt_name.cs": null,
+        "name.en6": null,
+        "name.en5": null,
+        "name.he2": null,
+        "website": null,
+        "name.cs": null,
+        "name.en4": null,
+        "name.en3": null,
+        "natural": null,
+        "ele": null,
+        "name.ar1": null,
+        "name.en2": null,
+        "name.en1": null,
+        "image3": null,
+        "image1": null,
+        "image": null,
+        "description.he": null,
+        "description": null,
+        "name.fr": null,
+        "name.ar": null,
+        "name.he": null,
+        "name.en": null,
+        "name.ru": null,
+        "name.de": null,
+        "is_in": null,
+        "name.el": null,
+        "alt_name": null,
+        "name.pa": null,
+        "name.mr": null,
+        "name.kn": null,
+        "name.hi": null,
+        "name.gu": null,
+        "name.bn": null,
+        "wpt_description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8253021577325,
+          37.662576651589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aleppo",
+        "inhabitedSince": -5000,
+        "inhabitedUntil": null,
+        "name_local": null,
+        "civilizations": null,
+        "wikipedia": null,
+        "wikidata": null,
+        "link": null,
+        "desc": null,
+        "name.no": null,
+        "name.id": null,
+        "name.eo": null,
+        "name.bg": null,
+        "name.be": null,
+        "old_name": null,
+        "religion": null,
+        "denomination": null,
+        "name.ckb": null,
+        "description.hu": null,
+        "wiki.en": null,
+        "name.zh": null,
+        "inscription": null,
+        "historic.period": null,
+        "name.ka": null,
+        "description.de": null,
+        "name.ko": null,
+        "name.he3": null,
+        "url": null,
+        "access": null,
+        "layer": null,
+        "addr.city": null,
+        "name.ku": null,
+        "alt_name.ar": null,
+        "name.la": null,
+        "alt_name.el": null,
+        "website1": null,
+        "whc.inscription_date": null,
+        "whc.criteria": null,
+        "ref.whc": null,
+        "designation": null,
+        "name.ml": null,
+        "name.he1": null,
+        "name.ro": null,
+        "image_2": null,
+        "image_1": null,
+        "reference": null,
+        "name.hy": null,
+        "man_made": null,
+        "description.en": null,
+        "place": null,
+        "name.vi": null,
+        "name.tr": null,
+        "name.sl": null,
+        "name.pl": null,
+        "name.nl": null,
+        "name.mn": null,
+        "name.ja": null,
+        "name.fi": null,
+        "int_name": null,
+        "mapillary": null,
+        "alt_name.he": null,
+        "alt_name.en": null,
+        "name.hu": null,
+        "heritage": null,
+        "name.lt": null,
+        "historic.era": null,
+        "old_name.fr": null,
+        "image6": null,
+        "image5": null,
+        "image4": null,
+        "image2": null,
+        "wikipedia.en": null,
+        "start_date": null,
+        "site_type": null,
+        "short_name.cs": null,
+        "name.uk": null,
+        "name.sr": null,
+        "name.pt": null,
+        "name.it": null,
+        "name.es": null,
+        "name.ca": null,
+        "name.br": null,
+        "historic.civilization": null,
+        "alt_name.cs": null,
+        "name.en6": null,
+        "name.en5": null,
+        "name.he2": null,
+        "website": null,
+        "name.cs": null,
+        "name.en4": null,
+        "name.en3": null,
+        "natural": null,
+        "ele": null,
+        "name.ar1": null,
+        "name.en2": null,
+        "name.en1": null,
+        "image3": null,
+        "image1": null,
+        "image": null,
+        "description.he": null,
+        "description": null,
+        "name.fr": null,
+        "name.ar": null,
+        "name.he": null,
+        "name.en": null,
+        "name.ru": null,
+        "name.de": null,
+        "is_in": null,
+        "name.el": null,
+        "alt_name": null,
+        "name.pa": null,
+        "name.mr": null,
+        "name.kn": null,
+        "name.hi": null,
+        "name.gu": null,
+        "name.bn": null,
+        "wpt_description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.1677989018932,
+          36.2159065420022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Byblos",
+        "inhabitedSince": -5000,
+        "inhabitedUntil": null,
+        "name_local": null,
+        "civilizations": null,
+        "wikipedia": null,
+        "wikidata": null,
+        "link": null,
+        "desc": null,
+        "name.no": null,
+        "name.id": null,
+        "name.eo": null,
+        "name.bg": null,
+        "name.be": null,
+        "old_name": null,
+        "religion": null,
+        "denomination": null,
+        "name.ckb": null,
+        "description.hu": null,
+        "wiki.en": null,
+        "name.zh": null,
+        "inscription": null,
+        "historic.period": null,
+        "name.ka": null,
+        "description.de": null,
+        "name.ko": null,
+        "name.he3": null,
+        "url": null,
+        "access": null,
+        "layer": null,
+        "addr.city": null,
+        "name.ku": null,
+        "alt_name.ar": null,
+        "name.la": null,
+        "alt_name.el": null,
+        "website1": null,
+        "whc.inscription_date": null,
+        "whc.criteria": null,
+        "ref.whc": null,
+        "designation": null,
+        "name.ml": null,
+        "name.he1": null,
+        "name.ro": null,
+        "image_2": null,
+        "image_1": null,
+        "reference": null,
+        "name.hy": null,
+        "man_made": null,
+        "description.en": null,
+        "place": null,
+        "name.vi": null,
+        "name.tr": null,
+        "name.sl": null,
+        "name.pl": null,
+        "name.nl": null,
+        "name.mn": null,
+        "name.ja": null,
+        "name.fi": null,
+        "int_name": null,
+        "mapillary": null,
+        "alt_name.he": null,
+        "alt_name.en": null,
+        "name.hu": null,
+        "heritage": null,
+        "name.lt": null,
+        "historic.era": null,
+        "old_name.fr": null,
+        "image6": null,
+        "image5": null,
+        "image4": null,
+        "image2": null,
+        "wikipedia.en": null,
+        "start_date": null,
+        "site_type": null,
+        "short_name.cs": null,
+        "name.uk": null,
+        "name.sr": null,
+        "name.pt": null,
+        "name.it": null,
+        "name.es": null,
+        "name.ca": null,
+        "name.br": null,
+        "historic.civilization": null,
+        "alt_name.cs": null,
+        "name.en6": null,
+        "name.en5": null,
+        "name.he2": null,
+        "website": null,
+        "name.cs": null,
+        "name.en4": null,
+        "name.en3": null,
+        "natural": null,
+        "ele": null,
+        "name.ar1": null,
+        "name.en2": null,
+        "name.en1": null,
+        "image3": null,
+        "image1": null,
+        "image": null,
+        "description.he": null,
+        "description": null,
+        "name.fr": null,
+        "name.ar": null,
+        "name.he": null,
+        "name.en": null,
+        "name.ru": null,
+        "name.de": null,
+        "is_in": null,
+        "name.el": null,
+        "alt_name": null,
+        "name.pa": null,
+        "name.mr": null,
+        "name.kn": null,
+        "name.hi": null,
+        "name.gu": null,
+        "name.bn": null,
+        "wpt_description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.6512089201512,
+          34.1234649124884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beirut",
+        "inhabitedSince": -5000,
+        "inhabitedUntil": null,
+        "name_local": null,
+        "civilizations": null,
+        "wikipedia": null,
+        "wikidata": null,
+        "link": null,
+        "desc": null,
+        "name.no": null,
+        "name.id": null,
+        "name.eo": null,
+        "name.bg": null,
+        "name.be": null,
+        "old_name": null,
+        "religion": null,
+        "denomination": null,
+        "name.ckb": null,
+        "description.hu": null,
+        "wiki.en": null,
+        "name.zh": null,
+        "inscription": null,
+        "historic.period": null,
+        "name.ka": null,
+        "description.de": null,
+        "name.ko": null,
+        "name.he3": null,
+        "url": null,
+        "access": null,
+        "layer": null,
+        "addr.city": null,
+        "name.ku": null,
+        "alt_name.ar": null,
+        "name.la": null,
+        "alt_name.el": null,
+        "website1": null,
+        "whc.inscription_date": null,
+        "whc.criteria": null,
+        "ref.whc": null,
+        "designation": null,
+        "name.ml": null,
+        "name.he1": null,
+        "name.ro": null,
+        "image_2": null,
+        "image_1": null,
+        "reference": null,
+        "name.hy": null,
+        "man_made": null,
+        "description.en": null,
+        "place": null,
+        "name.vi": null,
+        "name.tr": null,
+        "name.sl": null,
+        "name.pl": null,
+        "name.nl": null,
+        "name.mn": null,
+        "name.ja": null,
+        "name.fi": null,
+        "int_name": null,
+        "mapillary": null,
+        "alt_name.he": null,
+        "alt_name.en": null,
+        "name.hu": null,
+        "heritage": null,
+        "name.lt": null,
+        "historic.era": null,
+        "old_name.fr": null,
+        "image6": null,
+        "image5": null,
+        "image4": null,
+        "image2": null,
+        "wikipedia.en": null,
+        "start_date": null,
+        "site_type": null,
+        "short_name.cs": null,
+        "name.uk": null,
+        "name.sr": null,
+        "name.pt": null,
+        "name.it": null,
+        "name.es": null,
+        "name.ca": null,
+        "name.br": null,
+        "historic.civilization": null,
+        "alt_name.cs": null,
+        "name.en6": null,
+        "name.en5": null,
+        "name.he2": null,
+        "website": null,
+        "name.cs": null,
+        "name.en4": null,
+        "name.en3": null,
+        "natural": null,
+        "ele": null,
+        "name.ar1": null,
+        "name.en2": null,
+        "name.en1": null,
+        "image3": null,
+        "image1": null,
+        "image": null,
+        "description.he": null,
+        "description": null,
+        "name.fr": null,
+        "name.ar": null,
+        "name.he": null,
+        "name.en": null,
+        "name.ru": null,
+        "name.de": null,
+        "is_in": null,
+        "name.el": null,
+        "alt_name": null,
+        "name.pa": null,
+        "name.mr": null,
+        "name.kn": null,
+        "name.hi": null,
+        "name.gu": null,
+        "name.bn": null,
+        "wpt_description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.513056,
+          33.888925003466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sidon",
+        "inhabitedSince": -4000,
+        "inhabitedUntil": null,
+        "name_local": null,
+        "civilizations": null,
+        "wikipedia": null,
+        "wikidata": null,
+        "link": null,
+        "desc": null,
+        "name.no": null,
+        "name.id": null,
+        "name.eo": null,
+        "name.bg": null,
+        "name.be": null,
+        "old_name": null,
+        "religion": null,
+        "denomination": null,
+        "name.ckb": null,
+        "description.hu": null,
+        "wiki.en": null,
+        "name.zh": null,
+        "inscription": null,
+        "historic.period": null,
+        "name.ka": null,
+        "description.de": null,
+        "name.ko": null,
+        "name.he3": null,
+        "url": null,
+        "access": null,
+        "layer": null,
+        "addr.city": null,
+        "name.ku": null,
+        "alt_name.ar": null,
+        "name.la": null,
+        "alt_name.el": null,
+        "website1": null,
+        "whc.inscription_date": null,
+        "whc.criteria": null,
+        "ref.whc": null,
+        "designation": null,
+        "name.ml": null,
+        "name.he1": null,
+        "name.ro": null,
+        "image_2": null,
+        "image_1": null,
+        "reference": null,
+        "name.hy": null,
+        "man_made": null,
+        "description.en": null,
+        "place": null,
+        "name.vi": null,
+        "name.tr": null,
+        "name.sl": null,
+        "name.pl": null,
+        "name.nl": null,
+        "name.mn": null,
+        "name.ja": null,
+        "name.fi": null,
+        "int_name": null,
+        "mapillary": null,
+        "alt_name.he": null,
+        "alt_name.en": null,
+        "name.hu": null,
+        "heritage": null,
+        "name.lt": null,
+        "historic.era": null,
+        "old_name.fr": null,
+        "image6": null,
+        "image5": null,
+        "image4": null,
+        "image2": null,
+        "wikipedia.en": null,
+        "start_date": null,
+        "site_type": null,
+        "short_name.cs": null,
+        "name.uk": null,
+        "name.sr": null,
+        "name.pt": null,
+        "name.it": null,
+        "name.es": null,
+        "name.ca": null,
+        "name.br": null,
+        "historic.civilization": null,
+        "alt_name.cs": null,
+        "name.en6": null,
+        "name.en5": null,
+        "name.he2": null,
+        "website": null,
+        "name.cs": null,
+        "name.en4": null,
+        "name.en3": null,
+        "natural": null,
+        "ele": null,
+        "name.ar1": null,
+        "name.en2": null,
+        "name.en1": null,
+        "image3": null,
+        "image1": null,
+        "image": null,
+        "description.he": null,
+        "description": null,
+        "name.fr": null,
+        "name.ar": null,
+        "name.he": null,
+        "name.en": null,
+        "name.ru": null,
+        "name.de": null,
+        "is_in": null,
+        "name.el": null,
+        "alt_name": null,
+        "name.pa": null,
+        "name.mr": null,
+        "name.kn": null,
+        "name.hi": null,
+        "name.gu": null,
+        "name.bn": null,
+        "wpt_description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.3761154026678,
+          33.5601669147394
+        ]
+      }
+    }
+  ]
+}

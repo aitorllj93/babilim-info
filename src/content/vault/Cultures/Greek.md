@@ -7,7 +7,19 @@ subtitle: The divine democracy of thunder and wine
 
 In the azure waters of the Aegean Sea, where dolphins dance beneath the watchful gaze of [[Zeus]], the ancient Greeks wove tales that would echo through eternity. Their mythology was not merely stories told around hearthfires, but a living tapestry that explained the cosmos, justified social order, and gave meaning to the mysteries of existence. From the snow-capped peaks of Mount Olympus to the shadowy depths of Tartarus, Greek mythology created a universe where gods walked among mortals, heroes challenged fate, and every natural phenomenon bore the fingerprint of divine will.
 
-![[Assets/Cultures/Greek-Map.jpg|Infographic by Simeon Netchev at https://www.worldhistory.org/image/14624/the-greek-city-states-c-500-bce/]]
+```leaflet
+id: greek
+lat: 37.983810
+long: 23.727539
+geojson:
+  - [[Maps/Greek.geojson]]|Greek|[[Cultures/Greek]]
+  - [[Maps/Hittite.geojson]]|Hittite|[[Cultures/Hittite]]
+  - [[Maps/Phrygian.geojson]]|Phrygian|[[Cultures/Phrygian]]
+  - [[Maps/Thracian.geojson]]|Thracian|[[Cultures/Thracian]]
+  - [[Maps/Illyrian.geojson]]|Illyrian|[[Cultures/Illyrian]]
+```
+<!-- 
+![[Assets/Cultures/Greek-Map.jpg|Infographic by Simeon Netchev at https://www.worldhistory.org/image/14624/the-greek-city-states-c-500-bce/]] -->
 
 ## **Cosmology**
 

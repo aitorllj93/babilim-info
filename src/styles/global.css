@@ -408,6 +408,18 @@ pre[data-language="mermaid"] {
   @apply hidden flex-col w-full h-full px-4 font-paragraph peer-checked:flex cursor-pointer;
 }
 
+@utility map {
+  @apply flex w-full h-96;
+}
+
+@utility leaflet-container {
+  @apply rounded-2xl;
+  @media (prefers-color-scheme: dark) {
+    filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(
+            0.3
+        ) brightness(0.7);
+  }
+}
 
 mcreference {
   display: none;
