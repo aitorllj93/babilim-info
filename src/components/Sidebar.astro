@@ -1,0 +1,68 @@
+---
+export type Props = {
+  class?: string;
+  id?: string;
+  open?: boolean;
+  position?: "left" | "right";
+};
+
+const { open = false, position = "left", class: className, id = `${position}-drawer-toggle` } = Astro.props;
+
+const leftSidebarClass = "left-0 -translate-x-full";
+const rightSidebarClass = "right-0 z-20 translate-x-full";
+
+const leftArrowClass =
+  "left-[-11px] lg:left-[-22px] hover:left-0 peer-checked:left-[75vw] hover:peer-checked:left-[75vw] lg:peer-checked:left-[15vw] lg:hover:peer-checked:left-[15vw]";
+const rightArrowClass =
+  "right-[-11px] lg:right-[-22px] hover:right-0 peer-checked:right-[75vw] hover:peer-checked:right-[75vw] lg:peer-checked:right-[15vw] lg:hover:peer-checked:right-[15vw]";
+---
+
+<div class:list={[
+  "flex h-[calc(100dvh_-_30px)] lg:h-[calc(100dvh_-_48px)] sticky top-3 lg:top-6 z-20",
+  className,
+]}>
+  <input
+    type="checkbox"
+    id={id}
+    class="relative sr-only peer"
+    checked={open}
+  />
+  <label
+    for={id}
+    class:list={[
+      "absolute bottom-[-8px] sm:bottom-[initial] sm:top-[22px]  z-30 cursor-pointer bg-button-background/70 dark:bg-button-background-dark/70 backdrop-blur-sm rounded-full inline-block p-3 transition-all duration-500 peer-checked:rotate-180 ",
+      position === "left" ? leftArrowClass : rightArrowClass,
+    ]}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="-6 0 24 24"
+      class:list={[
+        "text-button-foreground dark:text-button-foreground-dark scale-125",
+        position === "left" ? "" : "rotate-180",
+      ]}
+      ><defs
+        ><path
+          id="weuiArrowOutlined0"
+          fill="currentColor"
+          d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"
+        ></path></defs
+      ><use
+        fill-rule="evenodd"
+        href="#weuiArrowOutlined0"
+        transform="rotate(-180 5.02 9.505)"></use></svg
+    >
+  </label>
+
+  <div
+    class:list={[
+      "fixed z-20 transition-all duration-500 transform peer-checked:translate-x-0 peer-checked:absolute lg:peer-checked:sticky",
+      position === "left" ? leftSidebarClass : rightSidebarClass,
+      "rounded-xl py-8 px-2 h-full w-[80vw] lg:w-[15vw] bg-sidebar-background/70 dark:bg-sidebar-background-dark/70 backdrop-blur-sm shadow-lg",
+    ]}
+  >
+    <slot />
+  </div>
+</div>

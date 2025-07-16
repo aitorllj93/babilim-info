@@ -1,0 +1,26 @@
+---
+import type { DocumentContext } from "../types";
+import KnowledgeGraph from "./KnowledgeGraph.astro";
+import Relationship from "./Relationship.astro";
+
+export type Props = {
+  document: DocumentContext;
+};
+
+const { document } = Astro.props;
+---
+
+<ul
+  class="w-full flex flex-col gap-6 max-h-[calc(100dvh_-_150px)] md:max-h-[calc(100dvh_-_170px)] overflow-x-hidden overflow-y-auto scrollbar-thin"
+>
+  <KnowledgeGraph class="flex w-full aspect-square" slug={document.id}  />
+  <Relationship title="Parents" links={[document.data.father, document.data.mother]} />
+  <Relationship title="Siblings" links={document.data.siblings} />
+  <Relationship title="Spouses" links={document.data.spouses} />
+  <Relationship title="Offspring" links={document.data.offspring} />
+  <Relationship title="Enemies" links={document.data.enemies} />
+  <Relationship title="Allies" links={document.data.allies} />
+  <Relationship title="Cognates" links={document.data.cognates} />
+  <Relationship title="Syncretics" links={document.data.syncretics} />
+  <Relationship title="Relateds" links={document.data.relateds} />
+</ul>

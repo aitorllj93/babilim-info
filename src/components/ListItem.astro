@@ -1,0 +1,116 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BabylonPicture from "../assets/Babylon.jpg";
+import Tag from "./Tag.astro";
+import { getImage } from "astro:assets";
+
+export type Props = {
+  activeTag?: CollectionEntry<"tags">;
+  showTags?: boolean;
+  class?: string;
+  document: CollectionEntry<"documents">;
+  tags?: CollectionEntry<"tags">[];
+  transitionSuffix?: string;
+};
+
+const {
+  activeTag,
+  class: className,
+  tags,
+  document: d,
+  showTags = false,
+  transitionSuffix,
+} = Astro.props;
+
+const { data } = d;
+const { cover, description } = d.data;
+
+const getCover = () => {
+  if (cover?.src) {
+    return cover;
+  }
+
+  console.warn(`Missing cover for ${data.title} (${data.tags?.filter(t => t.startsWith('culture')).join(',')})`);
+
+  const tagImage = tags?.find((t) => t.data.image)?.data.image;
+
+  if (tagImage) {
+    return tagImage;
+  }
+
+  const activeTagImage = activeTag?.data.image;
+
+  if (activeTagImage) {
+    return activeTagImage
+  }
+
+  return BabylonPicture;
+}
+
+const coverImageSrc = getCover();
+const coverX = "cover-x" in data ? data["cover-x"] : undefined;
+const coverY = "cover-y" in data ? data["cover-y"] : undefined;
+
+const coverImage = coverImageSrc ? (await getImage({
+  src: coverImageSrc,
+  format: 'webp',
+  quality: 'high',
+})) : undefined;
+---
+
+<li
+  class:list={[
+    "group bg-background dark:bg-background-dark rounded-lg shadow-lg transition-all hover:scale-[102%] bg-cover h-[108px]",
+    className,
+  ]}
+  transition:name={`${d.id}-cover${transitionSuffix ? `-${transitionSuffix}` : ''}`}
+  style={coverImage &&
+    `background-image: url('${coverImage.src}'); background-position: ${coverX}% ${coverY}%;`}
+>
+  <div
+    class:list={[
+      "flex flex-col gap-2 p-2 rounded-lg w-full h-full",
+      coverImage && "bg-black/30 backdrop-brightness-100 text-white",
+      coverImage && "hover:bg-black/10",
+      coverImage && !cover && "backdrop-brightness-50!",
+    ]}
+  >
+    <a href={d.data.permalink} class="block h-full w-full absolute top-0 left-0"
+    ></a>
+    <div class="h-full flex gap-4 justify-between items-end">
+      <!-- {cover && <Image src={cover} alt="" class:list={[
+          "rounded-lg shadow w-32 max-h-48 lg:max-h-[30rem] object-cover",
+          (coverX || coverY) ? `` : 'object-top'
+        ]} style={(coverX || coverY) ? `object-position: ${coverX}% ${coverY}%;`: ''}  />} -->
+      <h3
+        transition:name={`${d.id}-title${transitionSuffix ? `-${transitionSuffix}` : ''}`}
+        class="text-xl text-nowrap font-menu font-semibold text-heading-foreground-dark w-full truncate"
+      >
+        {d.data.title}
+      </h3>
+      {
+        showTags && (
+          <ul
+            class:list={[
+              "hidden gap-2 flex-wrap flex-row-reverse max-w-[80%] content-start",
+              "md:group-hover:flex max-h-[90px] overflow-hidden",
+            ]}
+          >
+            {tags
+              ?.map((t) => (
+                <li class="h-fit hover:scale-105 transition-all z-20">
+                  <Tag size="xs" tag={t} />
+                </li>
+              ))
+              .filter(Boolean)}
+          </ul>
+        )
+      }
+    </div>
+    <!-- <a class:list={[cover && "group-hover:invisible"]} href={d.data.permalink}>
+      <p class="text-xs line-clamp-2">
+        {description}
+      </p>
+    </a> -->
+  </div>
+</li>

@@ -1,0 +1,43 @@
+---
+import Search from "astro-pagefind/components/Search";
+
+import website from "../../website.config";
+import BabylonPicture from "../content/tags/Assets/Babylon.jpg";
+
+import LandingPageLayout from "../components/LandingPageLayout.astro";
+import LeftSidebar from "../components/LeftSidebar.astro";
+import KnowledgeGraph from "../components/KnowledgeGraph.astro";
+
+import { getHomePageStaticPaths } from "../helpers/getProps";
+
+const { props } = getHomePageStaticPaths();
+
+---
+
+<LandingPageLayout  backgroundImage={BabylonPicture} backgroundPosition={{
+  x: 25,
+  y: 50,
+}} scrollable page={props.page}>
+  <LeftSidebar class="sm:p-3 lg:p-6" open={false} website={website} navigation={props.navigation} />
+  <article
+    class="h-[100dvh] flex flex-col gap-6 md:gap-12 rounded-4xl items-center grow-1 justify-between max-w-full"
+  >
+    <section class="flex flex-col gap-2 items-center  mt-16">
+      <h1
+        class="text-6xl lg:text-8xl font-title text-article-title-foreground dark:text-article-title-foreground-dark"
+      >
+        {website.title}
+      </h1>
+      <p
+        class="px-4 mb-4 text-center text-balance text-3xl font-heading text-paragraph-foreground-dark"
+      >
+        {website.description}
+      </p>
+      <Search
+        id="indexSearch"
+        className="pagefind-ui-main-search"
+        uiOptions={{ autofocus: true, showImages: false, pageSize: 6 }}
+      />
+    </section>
+    <KnowledgeGraph  />
+</Layout>

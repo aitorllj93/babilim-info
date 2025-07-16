@@ -1,0 +1,18 @@
+---
+export type Props = {
+  class?: string;
+  transitionId?: string;
+}
+
+const { class: className, transitionId } = Astro.props;
+---
+
+<h1
+  data-pagefind-weight="10"
+  class:list={[
+    "text-center text-article-title-foreground dark:text-article-title-foreground-dark",
+    className
+  ]}
+  transition:name={`${transitionId}-title`}>
+  <slot />
+</h1>

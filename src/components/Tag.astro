@@ -1,0 +1,67 @@
+---
+import Case from 'case';
+
+import type { CollectionEntry } from 'astro:content';
+import websiteConfig from '../../website.config';
+import TagIcon from './TagIcon.astro';
+
+
+export type Props = {
+  class?: string;
+  count?: number;
+  tag: CollectionEntry<'tags'>;
+  size?: 'xs' | 'sm' | 'md';
+};
+
+const { class: className, count, tag, size = 'md' } = Astro.props;
+
+const [tagType, tagId] = tag.data.id.split('/');
+
+const iconByType = {
+  'Trait': 'ph:person-duotone',
+  'Domain': 'mingcute:magic-3-fill',
+  'Culture': 'ic:twotone-flag',
+  Motif: 'mingcute:hashtag-fill',
+}
+
+const colorByType = {
+  Trait: { color: undefined },
+  Domain: { color: undefined },
+  Culture: { color: undefined },
+  Motif: {
+    color: 'oklch(.71 .097 111.7)',
+  }
+}
+
+const type = (tag?.data.type ?? Case.title(tagType)) as NonNullable<CollectionEntry<'tags'>['data']['type']>
+const icon = tag?.data.icon ?? ((type in iconByType) ? iconByType[type] : 'mdi:tag');
+const backgroundColor = tag?.data.color ?? ((type in colorByType) ? colorByType[type]?.color : undefined);
+const foregroundColor = tag?.data.foreground ?? (backgroundColor ? '#fff' : undefined);
+const title = tag?.data.name ?? Case.title(tagId);
+---
+<a class="no-underline" href={`${websiteConfig.base.length > 0 ? `/${websiteConfig.base}` : ''}/tags/${tag?.id ?? tag}`}>  
+  {count && (<div class="relative">
+    <span class="absolute top-[-3px] right-[-2px] bg-badge-background dark:bg-badge-background-dark text-badge-foreground dark:text-badge-foreground-dark flex items-center justify-center font-menu text-sm rounded-full w-6 h-6 shadow-2xl"
+      style={`${backgroundColor ? `background-color: ${backgroundColor}; border-color: ${backgroundColor};` : ''}${foregroundColor ? `color: ${foregroundColor};` : ''}`}>
+      {count}
+    </span>
+  </div>)}
+
+  <span 
+    class:list={[
+      "flex items-center border border-badge-border dark:border-badge-border-dark bg-badge-background dark:bg-badge-background-dark font-menu text-badge-foreground dark:text-badge-foreground-dark",
+      size === 'xs' && 'text-xs rounded-md p-0.5',
+      size === 'sm' && 'text-sm rounded-lg p-1',
+      size === 'md' && "text-sm rounded-lg p-1 lg:text-base lg:rounded-xl lg:p-2",
+      className,
+    ]}
+    style={`${backgroundColor ? `background-color: ${backgroundColor};  border-color: ${backgroundColor};` : ''}${foregroundColor ? `color: ${foregroundColor};` : ''}`}
+  >
+    <TagIcon class:list={[
+      size === "xs" && "mr-0.25",
+      size === "sm" && "mr-0.5",
+      size === "md" && "mr-2 lg:mr-2",
+    ]} type={type} icon={icon} size={size} />
+    {title}
+  </span>
+</a>

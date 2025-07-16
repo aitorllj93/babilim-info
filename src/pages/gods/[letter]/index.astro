@@ -1,0 +1,59 @@
+---
+import website from "../../../../website.config";
+
+import Article from "../../../components/Article.astro";
+import ArticleTitle from "../../../components/ArticleTitle.astro";
+import Layout from "../../../components/Layout.astro";
+import LeftSidebar from "../../../components/LeftSidebar.astro";
+import ListItem from "../../../components/ListItem.astro";
+import { getAllGodsByAlphabetPageStaticPaths } from "../../../helpers/getProps";
+import AlphabetPagination from "../../../components/AlphabetPagination.astro";
+
+export const getStaticPaths = getAllGodsByAlphabetPageStaticPaths;
+
+const { letter } = Astro.params;
+const { page, navigation, documents, staticPaths } = Astro.props;
+
+const current = staticPaths.findIndex((p) => p.params.letter === letter);
+const prev = staticPaths.at(current - 1);
+const next = staticPaths.at(current + 1) ?? staticPaths[0];
+
+---
+
+<Layout page={page}>
+  <LeftSidebar website={website} navigation={navigation} />
+  <Article>
+    <ArticleTitle> Gods </ArticleTitle>
+    <AlphabetPagination
+      prev={{
+        href: `/gods/${prev?.params.letter}`,
+      }}
+      next={{
+        href: `/gods/${next?.params.letter}`,
+      }},
+      pages={
+        staticPaths.map(p => ({
+          href: `/gods/${p.params.letter}`,
+          label: p.params.letter.toUpperCase(),
+        }))
+      }
+    />
+    <ul class="not-prose grid grid-cols-1 lg:grid-cols-3 gap-3">
+      {documents.map((d) => <ListItem document={d} />)}
+    </ul>
+    <AlphabetPagination
+      prev={{
+        href: `/gods/${prev?.params.letter}`,
+      }}
+      next={{
+        href: `/gods/${next?.params.letter}`,
+      }},
+      pages={
+        staticPaths.map(p => ({
+          href: `/gods/${p.params.letter}`,
+          label: p.params.letter.toUpperCase(),
+        }))
+      }
+    />
+  </Article>
+</Layout>

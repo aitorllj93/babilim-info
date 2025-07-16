@@ -1,0 +1,12 @@
+{
+  "cssTheme": "Border",
+  "theme": "system",
+  "baseFontSize": 16,
+  "translucency": false,
+  "enabledCssSnippets": [
+    "workspace"
+  ],
+  "nativeMenus": false,
+  "showRibbon": true,
+  "showViewHeader": true
+}

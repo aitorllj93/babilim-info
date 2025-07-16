@@ -1,0 +1,51 @@
+---
+import type { RenderedContent } from "astro:content";
+import { useI18n } from "../../i18n/utils";
+import type { DocumentContext } from "../../types";
+
+export type Heading = {
+  depth: number;
+  slug: string;
+  text: string;
+};
+
+type RenderedContentWithHeadings = RenderedContent & {
+  metadata?: NonNullable<RenderedContent['metadata']> & {
+    headings?: Heading[];
+  };
+}
+
+export type Props = {
+  document?: DocumentContext;
+}
+
+const { document } = Astro.props;
+
+const headings = (document?.rendered as RenderedContentWithHeadings)?.metadata?.headings;
+
+const shouldRender = !!(headings?.length && headings.length > 0);
+
+const { t } = useI18n(Astro);
+---
+
+{
+   shouldRender && (
+   <nav class=" text-menu-foreground dark:text-menu-foreground-dark font-menu">
+      <h2 class="text-xl mb-2">{t('nav.tableOfContents')}</h2>
+      <ul class="flex flex-col gap-0.5 max-h-[calc(100dvh_-_250px)] overflow-auto scrollbar-thin">
+        {headings.map(({ depth, slug, text }) => (
+          <li class="w-full rounded-lg py-1 px-2 hover:bg-menu-active-background dark:hover:bg-menu-active-background-dark">
+            <a class:list={[
+              "flex",
+              depth === 2 && "ml-2",
+              depth === 3 && "ml-4",
+              depth === 4 && "ml-6",
+            ]} href={`#${slug}`} title={text}>
+              <span class="truncate">{text}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}

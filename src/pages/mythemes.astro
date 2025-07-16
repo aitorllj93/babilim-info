@@ -1,0 +1,30 @@
+---
+
+
+import website from "../../website.config";
+import Article from "../components/Article.astro";
+import ArticleTitle from "../components/ArticleTitle.astro";
+
+import Layout from "../components/Layout.astro";
+import LeftSidebar from "../components/LeftSidebar.astro";
+import ListItem from "../components/ListItem.astro";
+import { getAllMythemesPageStaticPaths } from "../helpers/getProps";
+
+const { props } = getAllMythemesPageStaticPaths()
+const { documents, navigation, page } = props;
+
+---
+
+<Layout page={page}>
+  <LeftSidebar website={website} navigation={navigation} />
+  <Article>
+    <ArticleTitle>
+      Mythemes
+    </ArticleTitle>
+    <ul class="not-prose grid grid-cols-1 lg:grid-cols-3 gap-3">
+      {documents.map((d) => (
+        <ListItem tags={[]} document={d} />
+      ))}
+    </ul>
+  </Article>
+</Layout>

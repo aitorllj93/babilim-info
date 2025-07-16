@@ -1,0 +1,27 @@
+---
+import { ClientRouter } from "astro:transitions";
+import SEO from './SEO.astro'
+
+import type { PageContext } from '../types'
+
+export type Props = {
+  page: PageContext
+}
+
+const { page } = Astro.props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/pwa-192x192.png" >
+  <link rel="mask-icon" href="/favicon.svg" color="#e7d2a9" >
+  <meta name="msapplication-TileColor" content="#e7d2a9" >
+  <meta name="theme-color" content="#e7d2a9" media="(prefers-color-scheme: light)" >
+  <meta name="theme-color" content="#262626" media="(prefers-color-scheme: dark)" >
+  <link rel="manifest" href="/manifest.webmanifest" >
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <SEO page={page} />
+  <ClientRouter />
+</head>

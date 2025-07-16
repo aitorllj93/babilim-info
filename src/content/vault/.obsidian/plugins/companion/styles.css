@@ -1,0 +1,25 @@
+/* src/styles.sass */
+.ai-complete-advanced-settings {
+  padding-left: 1rem;
+}
+.ai-complete-chatgpt-full-width {
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+}
+.ai-complete-jurassic-expandable {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ai-complete-ollama-full-width {
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+}
+.ai-complete-groq-full-width {
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+}

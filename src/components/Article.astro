@@ -1,0 +1,49 @@
+---
+export type Props = {
+  class?: string;
+  indexable?: boolean;
+};
+
+const { class: className, indexable } = Astro.props;
+
+const baseClassName = " overflow-x-hidden overflow-y-auto scrollbar-thin h-[100dvh] sm:h-[calc(100dvh_-_30px)] lg:h-[calc(100dvh_-_48px)] p-4 lg:p-8 bg-article-background/70 dark:bg-article-background-dark/70 backdrop-blur-sm sm:rounded-xl grow-1  max-w-full shadow-lg mb-6";
+
+const paragraphClassName = "text-paragraph-foreground dark:text-paragraph-foreground-dark prose-p:font-paragraph";
+const blockquoteClassName = "prose-blockquote:border-text dark:prose-blockquote:border-text-dark prose-blockquote:text-blockquote-foreground dark:prose-blockquote:text-blockquote-foreground-dark";
+const codeClassName = "prose-code:rounded-lg prose-code:px-1 prose-code:py-0.5 prose-code:before:content-none prose-code:after:content-none prose-code:text-code-foreground dark:prose-code:text-code-foreground-dark prose-code:bg-code-background dark:prose-code:bg-code-background-dark prose-code:font-code prose-pre:!bg-pre-background dark:prose-pre:!bg-pre-background-dark";
+const listClassname = "prose-li:marker:text-li-marker-foreground dark:prose-li:marker:text-li-marker-foreground-dark";
+const headingsClassName = "prose-headings:text-heading-foreground dark:prose-headings:text-heading-foreground-dark prose-h1:text-article-title-foreground dark:prose-h1:article-title-foreground-dark prose-h1:font-title prose-headings:font-heading";
+const linksClassName = "prose-a:text-primary prose-a:opacity-[0.8] prose-a:hover:opacity-100";
+const imagesClassName = "prose-img:rounded-3xl prose-img:mx-auto";
+const separatorClassName = "prose-hr:border-t-2 prose-hr:border-hr-border dark:prose-hr:border-hr-border-dark";
+const tablesClassName = "prose-thead:border-hr-border prose-tr:border-hr-border dark:prose-thead:border-hr-border-dark dark:prose-tr:border-hr-border-dark";
+
+const proseClassName = `prose dark:prose-invert lg:prose-lg xl:prose-xl 2xl:prose-2xl ${paragraphClassName} ${blockquoteClassName} ${codeClassName} ${listClassname} ${headingsClassName} ${linksClassName} ${imagesClassName} ${separatorClassName} ${tablesClassName} ${tablesClassName}`;
+---
+{
+  indexable && (
+    <article
+      data-pagefind-body
+      class:list={[
+        baseClassName,
+        proseClassName,
+        className,
+      ]}
+    >
+      <slot />
+    </article>
+  )
+}
+{
+  !indexable && (
+    <article
+      class:list={[
+        baseClassName,
+        proseClassName,
+        className,
+      ]}
+    >
+      <slot />
+    </article>
+  )
+}

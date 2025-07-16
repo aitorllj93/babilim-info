@@ -1,0 +1,22 @@
+---
+import Sidebar from "./Sidebar.astro";
+
+import type { DocumentContext, NavigationContext } from "../types";
+import EntryMetadataTabset from "./EntryMetadataTabset.astro";
+
+export type Props = {
+  document?: DocumentContext;
+  navigation: NavigationContext;
+  showToC?: boolean;
+  showLinks?: boolean;
+  showRelations?: boolean;
+};
+---
+
+<Sidebar class="hidden lg:flex" open position="right" id="right-sidebar-desktop">
+  <EntryMetadataTabset id="right-sidebar-desktop" {...Astro.props} />
+</Sidebar>
+
+<Sidebar class="flex lg:hidden" position="right" id="right-sidebar-touch">
+  <EntryMetadataTabset  id="right-sidebar-touch" {...Astro.props} />
+</Sidebar>

@@ -1,0 +1,448 @@
+@import "tailwindcss";
+@import "tailwindcss-animated";
+@plugin "@tailwindcss/typography";
+@plugin 'tailwind-scrollbar';
+
+@view-transition {
+  navigation: auto;
+}
+
+@font-face {
+  font-family: 'Handwritingdraft';
+  src: url('../assets/fonts/Handwritingdraft.woff2') format('woff2'),
+    url('../assets/fonts/Handwritingdraft.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Handwritingdraft Fallback';
+  src: local('Verdana');
+}
+
+/* patrick-hand-latin-400-normal */
+@font-face {
+  font-family: 'Patrick Hand';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/patrick-hand@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/patrick-hand@latest/latin-400-normal.woff) format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: 'Patrick Hand Fallback';
+  src: local('Trebuchet MS');
+  size-adjust: 85%;
+  ascent-override: 90%;     /* Optional: fine-tune vertical alignment */
+  descent-override: 10%;    /* Optional */
+  line-gap-override: 0%;
+}
+
+/* karla-latin-wght-normal */
+@font-face {
+  font-family: 'Karla Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/karla:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* quicksand-latin-wght-normal */
+@font-face {
+  font-family: 'Quicksand Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/quicksand:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* fira-code-latin-wght-normal */
+@font-face {
+  font-family: 'Fira Code Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/fira-code:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@theme {
+  /* GrayScales */
+  --color-gray-50: #fcfcfc;
+  --color-gray-100: #fafafa;
+  --color-gray-200: #f6f6f6;
+  --color-gray-300: #e3e3e3;
+  --color-gray-400: #e0e0e0;
+  --color-gray-500: #d4d4d4;
+  --color-gray-600: #bdbdbd;
+  --color-gray-700: #ababab;
+  --color-gray-800: #707070;
+  --color-gray-900: #5c5c5c;
+  --color-gray-950: #222222;
+
+  --color-obsidian-50: #212121;
+  --color-obsidian-100: #242424;
+  --color-obsidian-200: #262626;
+  --color-obsidian-300: #2a2a2a;
+  --color-obsidian-400: #363636;
+  --color-obsidian-500: #3f3f3f;
+  --color-obsidian-600: #555555;
+  --color-obsidian-700: #666666;
+  --color-obsidian-800: #999999;
+  --color-obsidian-900: #b3b3b3;
+  --color-obsidian-950: #dadada;
+
+  --color-purple-300: hsl(255, 89.76%, 75.9%);
+  --color-purple-400: hsl(257, 88.88%, 70.95%);
+  --color-purple-500: hsl(258, 88%, 66%);
+
+  /** Accent Colors **/
+  --color-primary: oklch(.71 .097 111.7);
+  --color-text: oklch(.41 .077 78.9);
+  --color-text-dark: rgb(255, 255, 255);
+
+  --color-success-foreground: var(--color-green-500);
+  --color-success-background: var(--color-green-200);
+  --color-success-border: var(--color-green-400);
+  --color-danger-foreground: var(--color-red-500);
+  --color-danger-background: var(--color-red-200);
+  --color-danger-border: var(--color-red-400);
+  --color-warning-foreground: var(--color-yellow-500);
+  --color-warning-background: var(--color-yellow-200);
+  --color-warning-border: var(--color-yellow-400);
+  --color-hint-foreground: var(--color-teal-500);
+  --color-hint-background: var(--color-teal-200);
+  --color-hint-border: var(--color-teal-400);
+  --color-info-foreground: var(--color-blue-500);
+  --color-info-background: var(--color-blue-200);
+  --color-info-border: var(--color-blue-400);
+  --color-example-foreground: var(--color-purple-500);
+  --color-example-background: var(--color-purple-200);
+  --color-example-border: var(--color-purple-400);
+  --color-quote-foreground: var(--color-slate-500);
+  --color-quote-background: var(--color-slate-200);
+  --color-quote-border: var(--color-slate-400);
+
+  /** Components **/
+  --color-background: oklch(0.87 0.059 83.7);
+  --color-article-background: oklch(0.91 0.048 83.6);
+  --color-article-title-foreground: var(--color-primary);
+  --color-sidebar-background: oklch(0.91 0.048 83.6);
+  --color-tab-background: oklch(0.87 0.059 83.7);
+  --color-tab-active-background: transparent;
+  --color-tab-active-border: var(--color-text);
+  --color-menu-active-background: oklch(.83 .058 83.6);
+  --color-menu-foreground: var(--color-text);
+  --color-badge-background: oklch(0.91 0.048 83.6);
+  --color-badge-foreground: var(--color-text);
+  --color-badge-border: oklch(.83 .058 83.6);
+  --color-button-background: oklch(.87 .059 83.7);
+  --color-button-foreground: var(--color-text);
+  --color-footer-background: oklch(0.91 0.048 83.6);
+  --color-footer-foreground: var(--color-text);
+  --color-footer-border: oklch(.83 .058 83.6);
+  --color-scrollbar-thumb: oklch(.83 .058 83.6);
+  --color-search-border: oklch(0.41 0.08 80.42 / 0.35);
+
+  /** Prose **/
+  --color-blockquote-foreground: var(--color-text);
+  --color-code-background: oklch(0.87 0.059 83.7);
+  --color-code-foreground: var(--color-text);
+  --color-heading-foreground: var(--color-text);
+  --color-li-marker-foreground: var(--color-text);
+  --color-paragraph-foreground: var(--color-text);
+  --color-pre-background: oklch(0.87 0.059 83.7);
+  --color-strong-foreground: var(--color-text);
+  --color-hr-border: oklch(.83.058 83.6);
+
+  /** Components: dark **/
+  --color-background-dark: var(--color-obsidian-200);
+  --color-article-background-dark: var(--color-obsidian-50);
+  --color-article-title-foreground-dark: var(--color-primary);
+  --color-sidebar-background-dark: var(--color-obsidian-50);
+  --color-tab-background-dark: var(--color-obsidian-400);
+  --color-tab-active-background-dark: transparent;
+  --color-tab-active-border-dark: var(--color-text-dark);
+  --color-menu-active-background-dark: var(--color-obsidian-300);
+  --color-menu-foreground-dark: var(--color-text-dark);
+  --color-badge-background-dark: var(--color-obsidian-50);
+  --color-badge-foreground-dark: var(--color-text-dark);
+  --color-badge-border-dark: var(--color-obsidian-300);
+  --color-button-background-dark: var(--color-obsidian-400);
+  --color-button-foreground-dark: var(--color-text-dark);
+  --color-footer-background-dark: var(--color-obsidian-50);
+  --color-footer-foreground-dark: var(--color-text-dark);
+  --color-footer-border-dark: var(--color-obsidian-300);
+  --color-scrollbar-thumb-dark: var(--color-obsidian-300);
+  --color-search-border-dark: oklch(1 0 0 / 0.16);
+
+  /** Prose: dark **/
+  --color-blockquote-foreground-dark: var(--color-text-dark);
+  --color-code-background-dark: var(--color-obsidian-300);
+  --color-code-foreground-dark: var(--color-text-dark);
+  --color-heading-foreground-dark: var(--color-text-dark);
+  --color-li-marker-foreground-dark: var(--color-text-dark);
+  --color-paragraph-foreground-dark: var(--color-text-dark);
+  --color-pre-background-dark: var(--color-obsidian-300);
+  --color-strong-foreground-dark: var(--color-text-dark);
+  --color-hr-border-dark: var(--color-obsidian-300);
+
+  --font-title: "Handwritingdraft", "Handwritingdraft Fallback", "sans-serif";
+  --font-heading: "Patrick Hand", "Patrick Hand Fallback", cursive;
+  --font-paragraph: "Karla Variable",  "sans-serif";
+  --font-menu: "Quicksand Variable",  "sans-serif";
+  --font-code: "Fira Code Variable", "ui-monospace";
+
+  --left-sidebar-content-height: calc(100vh - 200px);
+
+  --animate-bg-position: animate-bg-position 15s linear infinite;
+}
+
+@custom-variant marker (&::marker, & *::marker, &::-webkit-details-marker, & *::-webkit-details-marker);
+
+@utility bg-texture {
+  opacity: .12;
+  mix-blend-mode: multiply;
+  z-index: 100;
+  isolation: isolate;
+  pointer-events: none;
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100dvh;
+  position: fixed;
+  inset: 0;
+}
+
+@utility bg-texture-light {
+  background-image: url(../assets/texture.jpg);
+}
+
+@utility bg-texture-dark {
+  background-image: url(../assets/texture.jpg);
+}
+
+.astro-code code {
+  background: transparent !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .astro-code,
+  .astro-code span {
+    color: var(--shiki-dark) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+}
+
+blockquote[data-callout] {
+  border: none;
+  border-radius: 0.5rem;
+  padding-block: 1rem;
+
+  .callout-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+  }
+}
+
+blockquote[data-callout="abstract"],
+blockquote[data-callout="summary"],
+blockquote[data-callout="tldr"],
+blockquote[data-callout="tip"],
+blockquote[data-callout="hint"],
+blockquote[data-callout="important"] {
+  color: var(--color-hint-foreground);
+  border-color: var(--color-hint-border);
+  background-color: var(--color-hint-background);
+}
+
+blockquote[data-callout="info"],
+blockquote[data-callout="note"],
+blockquote[data-callout="todo"] {
+  color: var(--color-info-foreground);
+  border-color: var(--color-info-border);
+  background-color: var(--color-info-background);
+}
+
+blockquote[data-callout="success"],
+blockquote[data-callout="check"],
+blockquote[data-callout="done"] {
+  color: var(--color-success-foreground);
+  border-color: var(--color-success-border);
+  background-color: var(--color-success-background);
+}
+
+blockquote[data-callout="question"],
+blockquote[data-callout="help"],
+blockquote[data-callout="faq"],
+blockquote[data-callout="warning"],
+blockquote[data-callout="caution"],
+blockquote[data-callout="attention"] {
+  color: var(--color-warning-foreground);
+  border-color: var(--color-warning-border);
+  background-color: var(--color-warning-background);
+}
+
+blockquote[data-callout="failure"],
+blockquote[data-callout="fail"],
+blockquote[data-callout="missing"],
+blockquote[data-callout="danger"],
+blockquote[data-callout="error"],
+blockquote[data-callout="bug"] {
+  color: var(--color-danger-foreground);
+  border-color: var(--color-danger-border);
+  background-color: var(--color-danger-background);
+}
+
+blockquote[data-callout="example"] {
+  color: var(--color-example-foreground);
+  border-color: var(--color-example-border);
+  background-color: var(--color-example-background);
+}
+
+blockquote[data-callout="quote"],
+blockquote[data-callout="cite"] {
+  color: var(--color-quote-foreground);
+  border-color: var(--color-quote-border);
+  background-color: var(--color-quote-background);
+}
+
+iframe {
+  border-radius: 1.5rem;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+pre[data-language="mermaid"] {
+  display: none;
+}
+
+/** Timeline **/
+
+@utility timeline {
+  @apply flex flex-col relative;
+}
+
+@utility timeline-item {
+  @apply justify-items-center shrink-0 items-center grid relative;
+
+  grid-template-rows:  .5rem auto minmax(0,1fr);
+  grid-template-columns: minmax(0,1fr) auto minmax(0,1fr);
+}
+
+@utility timeline-item__card {
+  @apply bg-white m-1 mb-10 p-4 rounded-lg shadow-md;
+}
+
+@utility timeline-item__card--start {
+  @apply text-end;
+
+  grid-area: 1 / 1 / 4 / 2;
+  place-self: center flex-end;
+  text-align: end;
+}
+
+@utility timeline-item__card--end {
+  @apply text-start;
+
+  grid-area: 1 / 3 / 4 / 4;
+  place-self: center flex-start;
+}
+
+@utility timeline-item__indicator {
+  @apply w-5 h-5 bg-purple-400 rounded-full;
+
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+@utility timeline-item__line--start {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  width: .25rem;
+  height: 100%;
+  background-color: var(--color-purple-700);
+  border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+@utility timeline-item__line--end {
+  background-color: var(--color-purple-700);
+  border: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  grid-area: 3 / 2 / none;
+  width: .25rem;
+  height: 100%;
+}
+
+@utility timeline-card--date {
+  @apply font-paragraph italic;
+}
+
+@utility timeline-card--title {
+  @apply font-paragraph font-bold;
+}
+
+@utility timeline-card--content {
+  @apply font-paragraph leading-6;
+}
+
+
+@utility spoiler {
+  @apply flex flex-col w-full h-full px-4 font-paragraph peer-checked:hidden cursor-pointer bg-slate-800 text-white;
+}
+
+@utility spoiled {
+  @apply hidden flex-col w-full h-full px-4 font-paragraph peer-checked:flex cursor-pointer;
+}
+
+@utility map {
+  @apply flex w-full h-96;
+}
+
+@utility leaflet-container {
+  @apply rounded-2xl;
+  @media (prefers-color-scheme: dark) {
+    filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(
+            0.3
+        ) brightness(0.7);
+  }
+}
+
+mcreference {
+  display: none;
+}
+
+/** TODO: Remove double quotes from markdown so we don't need this patch */
+blockquote > p {
+  quotes: none;
+}
+
+@import "./pagefind.css";
+
+@keyframes animate-bg-position {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

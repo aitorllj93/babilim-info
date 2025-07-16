@@ -1,0 +1,27 @@
+name: Article
+description: New Article Entry for the Blog
+title: "[Article]: "
+labels: ["content"]
+body:
+  - type: dropdown
+    id: section
+    attributes:
+      label: What section does this article belong to?
+      options:
+        - Gods
+        - Mysteries
+        - Motifs
+        - Mythemes
+        - Cultures
+  - type: input
+    id: title
+    attributes:
+      label: The Article Title
+    validations:
+      required: true
+  - type: textarea
+    id: about
+    attributes:
+      label: Describe the article content
+    validations:
+      required: true

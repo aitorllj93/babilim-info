@@ -1,0 +1,43 @@
+---
+import type { GetImageResult, ImageMetadata } from 'astro';
+import '../styles/global.css';
+
+import type { DocumentContext, PageContext } from '../types';
+
+import Head from './Head.astro';
+
+export type Props = {
+  backgroundImage?: GetImageResult|ImageMetadata;
+  backgroundPosition?: {
+    x?: number;
+    y?: number;
+  };
+  class?: string;
+  page: PageContext
+  document?: DocumentContext;
+  scrollable?: boolean;
+}
+
+const { backgroundImage, backgroundPosition, class: className, document, page, scrollable } = Astro.props;
+
+const { language } = page;
+---
+<!doctype html>
+<html class="scroll-smooth scrollbar-thin scrollbar-thumb-scrollbar-thumb dark:scrollbar-thumb-scrollbar-thumb-dark scrollbar-track-transparent" lang={language}>
+  <Head page={page} />
+  <body class:list={[
+    "w-full h-full bg-background dark:bg-background-dark",
+    scrollable ? 'overflow-x-hidden' : 'overflow-hidden',
+    backgroundImage && `bg-no-repeat bg-cover bg-top-left bg-fixed animate-bg-position animate-duration-[30s]`,
+    className,
+  ]} style={
+    `${backgroundImage ? `background-image: url(${backgroundImage.src});` : ''}; ${backgroundPosition && `background-position: ${backgroundPosition.x}% ${backgroundPosition.y}%;`}`
+  }>
+    <div class="w-full h-full flex absolute -z-10 bg-linear-to-b from-[rgba(226,216,186,0.9)] via-[rgba(255,122,60,0.9)] to-[rgba(88,7,0,0.3)] dark:from-[rgba(0,0,33,0.9)] dark:via-[rgba(0,0,55,0.9)] dark:to-[rgba(7,0,88,0.5)]" />
+    <main class="flex items-start overflow-clip">
+      <slot />
+    </main>
+    <!-- <Footer document={document}  /> -->
+    <script src="./CustomElements/LeafletMap.ts"></script>
+  </body>
+</html>

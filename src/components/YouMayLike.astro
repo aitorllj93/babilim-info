@@ -1,0 +1,48 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { getDocuments } from "../helpers/getProps";
+import ListItem from "./ListItem.astro";
+
+export type Props = {
+  document: CollectionEntry<"documents">;
+};
+
+const allDocuments = getDocuments();
+
+const documentTagShouldBeShown =
+  (d: CollectionEntry<"documents">) => (t: CollectionEntry<"tags">) =>
+    d.data.tags?.includes(t.data.id);
+
+const { document } = Astro.props;
+
+const result = document.data.links
+  ?.map((link) => {
+    const match = allDocuments.find((d) => d.data.permalink === link.href);
+
+    return match;
+  })
+  .filter(Boolean) as CollectionEntry<"documents">[];
+
+if (result.length > 4) {
+  result.splice(4);
+}
+---
+{result?.length ? (
+  <div class="not-prose mt-8 lg:mt-16" data-pagefind-ignore>
+    <h2 class="font-heading text-text dark:text-text-dark text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-12">
+      You May Like
+    </h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
+      {
+        result.map((entry) => (
+          <ListItem
+            document={entry}
+            tags={[]}
+            transitionSuffix="yml"
+          />
+        ))
+      }
+    </ul>
+  </div>
+) : null}

@@ -1,0 +1,240 @@
+{
+  "main": {
+    "id": "805dded5bc2976a4",
+    "type": "split",
+    "children": [
+      {
+        "id": "77f087b56d8b912f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d189bc0bac55374c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Zeus.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Zeus"
+            }
+          },
+          {
+            "id": "956999c8076752b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Adrasteia.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Adrasteia"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3141678628460048",
+    "type": "split",
+    "children": [
+      {
+        "id": "16f6ae21e7a2d3ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "23b60824676cc055",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "1a7a3251a91784f2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#trait/aditya",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "44c1dc0da1c47a98",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "6462d287dceb22d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "42668c7f558cbda1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f49a37d44f48b0ff",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "El Juego de la Imitación/I - Los Músicos Tocan sus Instrumentos....md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for I - Los Músicos Tocan sus Instrumentos..."
+            }
+          },
+          {
+            "id": "cd2cce40914af584",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "El Juego de la Imitación/III - Bucles Cerrados.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from III - Bucles Cerrados"
+            }
+          },
+          {
+            "id": "d87c5872be9c2df4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3d84eb4e9d9dc4dd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Aion.md",
+                "followCursor": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Aion"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "companion:Toggle completion": false,
+      "reverse-prompter:Generate reverse prompt": false,
+      "pexels-banner:🚩 Pixel Banner Menu": false,
+      "obsidian42-brat:BRAT": false
+    }
+  },
+  "active": "d189bc0bac55374c",
+  "lastOpenFiles": [
+    "Aryaman.md",
+    "Motifs/A0.md",
+    "Motifs/A000.md",
+    "Motifs/A515.1.1.md",
+    "Motifs/A282.md",
+    "Motifs/A280.md",
+    "Motifs/__legacy/A515.1.1.md",
+    "Motifs/__legacy/A282.md",
+    "Motifs/__legacy/A280.md",
+    "Motifs/__legacy/A0.md",
+    "Motifs/__legacy",
+    "Motifs/A1.md",
+    "Motifs",
+    "Motifs/A515.1.1",
+    "Assets/Mythemes/Wild Hunt.jpg",
+    "Assets/Mythemes/War of the Foundation.jpg",
+    "Assets/Mythemes/Underworld.jpg",
+    "Assets/Mythemes/Trifunctional System.jpg",
+    "Assets/Mythemes/Transcendence.jpg",
+    "Assets/Mythemes/Theft of Fire.jpg",
+    "Assets/Mythemes/The White Goddess.jpg",
+    "Assets/Mythemes/The Promised Prince.jpg",
+    "Assets/Mythemes/The Labyrinth.jpg",
+    "Assets/Mythemes/The Great Flood.jpg",
+    "Assets/Mythemes",
+    "Mythemes/Wild Hunt.md",
+    "Mythemes/War of the Foundation.md",
+    "Mythemes/Underworld.md",
+    "Mythemes/Trifunctional System.md",
+    "Mythemes/Transcendence.md",
+    "Mythemes/Theft of Fire.md",
+    "Mythemes/The White Goddess.md",
+    "Mythemes/The Promised Prince.md",
+    "Mythemes/The Labyrinth.md",
+    "Mythemes/The Great Flood.md",
+    "Mythemes/The Exiled Heir.md",
+    "Mythemes/Serpent-slaying myth.md",
+    "Mythemes/Sacrifice of the Primordial Beign.md",
+    "Mythemes/Sacred Weapon.md",
+    "Mythemes/Sacred Grove.md",
+    "Mythemes",
+    "Assets/Cultures",
+    "Cultures",
+    "Myths/Metamorphoses",
+    "Drafts",
+    "Culture"
+  ]
+}

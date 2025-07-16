@@ -1,0 +1,62 @@
+---
+import type { GetStaticPaths } from "astro";
+import type { CollectionEntry } from "astro:content";
+
+import website from "../../../../../website.config";
+
+import Article from "../../../../components/Article.astro";
+import ArticleTitle from "../../../../components/ArticleTitle.astro";
+import Layout from "../../../../components/Layout.astro";
+import LeftSidebar from "../../../../components/LeftSidebar.astro";
+import ListItem from "../../../../components/ListItem.astro";
+import { getAllGodsPageStaticPaths } from "../../../../helpers/getProps";
+import Pagination from "../../../../components/Pagination.astro";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const { documents, tags, navigation, page } =
+    getAllGodsPageStaticPaths().props;
+
+  const pages = paginate(documents, {
+    pageSize: 30,
+  });
+
+  return pages.map((p) => ({
+    props: {
+      ...p.props,
+      tags,
+      navigation,
+      meta: page,
+    },
+    params: {
+      ...p.params,
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const { page, meta, navigation, tags } = Astro.props;
+
+const documentTagShouldBeShown =
+  (d: CollectionEntry<"documents">) => (t: CollectionEntry<"tags">) =>
+    d.data.tags?.includes(t.data.id);
+---
+
+<Layout page={meta}>
+  <LeftSidebar website={website} navigation={navigation} />
+  <Article>
+    <ArticleTitle>
+      Gods Index
+    </ArticleTitle>
+    <Pagination {...page} />
+    <ul class="not-prose grid grid-cols-1 lg:grid-cols-3 gap-3">
+      {
+        page.data.map((d) => (
+          <ListItem
+            tags={tags.filter(documentTagShouldBeShown(d))}
+            document={d}
+          />
+        ))
+      }
+    </ul>
+    <Pagination {...page} />
+  </Article>
+</Layout>

@@ -1,0 +1,59 @@
+---
+import { getImage } from 'astro:assets';
+
+export type Props = {
+  displayType?: 'mask' | 'full';
+  cover?: ImageMetadata;
+  transitionId?: string;
+  'cover-x'?: number;
+  'cover-y'?: number;
+}
+
+const { cover, 'cover-x': coverX, 'cover-y': coverY, displayType = 'mask', transitionId } = Astro.props;
+
+const coverImage = cover ? (await getImage({
+  src: cover,
+  format: 'webp',
+  quality: 'high',
+})) : undefined;
+
+const backgroundImage = coverImage ? `url('${coverImage.src}')` : undefined;
+// const backgroundPosition = coverX && coverY ? `${coverX}% ${coverY}%` : 'center';
+
+---
+{
+  displayType === 'mask' && coverImage && (
+    <link
+      rel="preload"
+      href={coverImage.src}
+      as="image"
+      fetchpriority="high" />
+    <div class="w-full max-w-[720px]  mx-auto h-48 md:h-[20rem] lg:h-[30rem] xl:h-[34rem] mb-4">
+      <div
+        class:list={[
+          `h-full w-full`,
+          `bg-cover bg-no-repeat mask-size-[100%_100%] mask-center mask-no-repeat mask-[url('../assets/scribble.png')]`,
+        ]}
+        style={`
+          background-image: ${backgroundImage};`}
+      />
+    </div>
+  )
+}
+{
+  displayType === 'full' && coverImage && (
+    <link
+      rel="preload"
+      href={coverImage.src}
+      as="image"
+      fetchpriority="high" />
+      <div
+        class:list={[
+          `bg-cover bg-no-repeat h-[45vh] lg:h-[60vh] w-full animate-bg-position`,
+        ]}
+        transition:name={transitionId ? `${transitionId}-cover` : undefined}
+        style={`
+          background-image: ${backgroundImage}; ${coverX && coverY && `background-position: ${coverX}% ${coverY}%;`}`}
+      />
+  )
+}

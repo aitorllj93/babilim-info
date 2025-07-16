@@ -1,0 +1,83 @@
+---
+import { render } from "astro:content";
+import type { DocumentContext, TagsContext } from "../types";
+import Article from "./Article.astro";
+import ArticleTitle from "./ArticleTitle.astro";
+import Tag from "./Tag.astro";
+import YouMayLike from "./YouMayLike.astro";
+import ArticleCover from "./ArticleCover.astro";
+
+export type Props = {
+  document: DocumentContext;
+  tags: TagsContext;
+};
+
+const { document, tags } = Astro.props;
+const { data } = document;
+
+const { description, subtitle, title } = data;
+
+const { Content } = await render(document);
+---
+
+<Article class="pt-0! px-0!" indexable>
+  <ArticleCover {...data} displayType="full" transitionId={document.id} />
+  <ArticleTitle
+    class:list={[
+      "sticky top-0 px-4 lg:px-8 py-2 lg:py-4 z-10 bg-[rgba(0,0,0,0.1)] backdrop-blur-sm -mr-5",
+      subtitle && "!mb-2",
+    ]}
+    transitionId={document.id}
+  >
+    {title}
+  </ArticleTitle>
+  <div class="px-4 lg:px-8" data-pagefind-weight="0.1">
+    {
+      subtitle && (
+        <h2 class="!mt-2 text-center text-subtitle-foreground dark:text-subtitle-foreground-dark opacity-60 italic">
+          {subtitle}
+        </h2>
+      )
+    }
+    <div class="flex flex-col lg:flex-row justify-end">
+      <p
+        class="!m-0 !mb-8 text-2xl lg:text-3xl xl:text-4xl !font-heading text-balance"
+        set:html={description}
+      />
+      {
+        tags?.tags?.length > 0 && (
+          <div class="flex flex-col lg:items-end gap-2 w-full font-heading">
+            <div class="flex flex-wrap flex-row lg:flex-row-reverse gap-2 lg:gap-4">
+              {tags.tags.map((t) => (
+                <Tag tag={t} />
+              ))}
+            </div>
+          </div>
+        )
+      }
+    </div>
+    <Content />
+    <YouMayLike document={document} />
+
+    <div
+      class="mt-6 rounded-lg bg-[rgba(0,0,0,0.1)] backdrop-blur-md p-4 shadow"
+    >
+      <script
+        src="https://giscus.app/client.js"
+        data-repo="aitorllj93/babilim-info"
+        data-repo-id="R_kgDOOtOj4g"
+        data-category="Comments"
+        data-category-id="DIC_kwDOOtOj4s4CqX9A"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="fro"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async></script>
+    </div>
+  </div>
+</Article>

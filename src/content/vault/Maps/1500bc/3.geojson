@@ -1,0 +1,1332 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.509966883166,
+          -42.2822860849315
+        ]
+      },
+      "properties": {
+        "NAME": "Tasmanian hunter-gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Tasmanian hunter-gatherers",
+        "TYPE": "hunter-gatherers",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Tasmanian hunter-gatherers",
+        "COLOR": "#45B7D1",
+        "AREA": 59343064861.7314
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.931230798652,
+          -5.47950410972421
+        ]
+      },
+      "properties": {
+        "NAME": "Papuan neolithic farmers",
+        "ABBREVN": null,
+        "SUBJECTO": "Papuan neolithic farmers",
+        "TYPE": "farmers",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Papuan neolithic farmers",
+        "COLOR": "#F39C12",
+        "AREA": 762789915239.223
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.089384618243,
+          0.787581362647711
+        ]
+      },
+      "properties": {
+        "NAME": "Austronesians",
+        "ABBREVN": null,
+        "SUBJECTO": "Austronesians",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Austronesians",
+        "COLOR": "#FFA07A",
+        "AREA": 722448128228.279
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0062451133604,
+          16.9841947819816
+        ]
+      },
+      "properties": {
+        "NAME": "Saba",
+        "ABBREVN": "Saba",
+        "SUBJECTO": "Saba",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Saba",
+        "COLOR": "#E67E22",
+        "AREA": 104705370949.19
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.0955527920297,
+          24.322963034999
+        ]
+      },
+      "properties": {
+        "NAME": "Egypt",
+        "ABBREVN": "Egypt",
+        "SUBJECTO": "Egypt",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Egypt",
+        "COLOR": "#E74C3C",
+        "AREA": 262669301096.61
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          53.9470609796887,
+          28.6761847499295
+        ]
+      },
+      "properties": {
+        "NAME": "Elam",
+        "ABBREVN": "Elam",
+        "SUBJECTO": "Elam",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Elam",
+        "COLOR": "#16A085",
+        "AREA": 412032937110.146
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.232072429216,
+          34.0486030014719
+        ]
+      },
+      "properties": {
+        "NAME": "Zhoa",
+        "ABBREVN": "Zhoa",
+        "SUBJECTO": "Zhoa",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Zhoa",
+        "COLOR": "#3498DB",
+        "AREA": 1172672524306.85
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.1269933958345,
+          30.6640708720729
+        ]
+      },
+      "properties": {
+        "NAME": "Kingdom of David and Solomon",
+        "ABBREVN": null,
+        "SUBJECTO": "Kingdom of David and Solomon",
+        "TYPE": "kingdom",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Kingdom of David and Solomon",
+        "COLOR": "#F8D7DA",
+        "AREA": 154623774728.257
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6183692607439,
+          18.7000928656065
+        ]
+      },
+      "properties": {
+        "NAME": "Kush",
+        "ABBREVN": "Kush",
+        "SUBJECTO": "Kush",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Kush",
+        "COLOR": "#2980B9",
+        "AREA": 333097319398.57
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.4146165197991,
+          24.5350497644391
+        ]
+      },
+      "properties": {
+        "NAME": "Arabian pastoral nomads",
+        "ABBREVN": null,
+        "SUBJECTO": "Arabian pastoral nomads",
+        "TYPE": "pastoral nomads",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Arabian pastoral nomads",
+        "COLOR": "#5DADE2",
+        "AREA": 2622036668761.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.4484560227684,
+          35.5687253942995
+        ]
+      },
+      "properties": {
+        "NAME": "Assyria",
+        "ABBREVN": "Assyria",
+        "SUBJECTO": "Assyria",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Assyria",
+        "COLOR": "#F8D7DA",
+        "AREA": 174587672726.09
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.5972744823362,
+          32.7203394117658
+        ]
+      },
+      "properties": {
+        "NAME": "Babylonia",
+        "ABBREVN": "Babylonia",
+        "SUBJECTO": "Babylonia",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Babylonia",
+        "COLOR": "#E74C3C",
+        "AREA": 129432990728.353
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7570562180981,
+          29.3719247440425
+        ]
+      },
+      "properties": {
+        "NAME": "state societies and Aramaean kingdoms",
+        "ABBREVN": null,
+        "SUBJECTO": "state societies and Aramaean kingdoms",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "state societies and Aramaean kingdoms",
+        "COLOR": "#45B7D1",
+        "AREA": 39541570487.6628
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.892446335735,
+          28.6555050691461
+        ]
+      },
+      "properties": {
+        "NAME": "Guanches",
+        "ABBREVN": null,
+        "SUBJECTO": "Guanches",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Guanches",
+        "COLOR": "#5DADE2",
+        "AREA": 3446786966.9564
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.5190150939935,
+          17.980568430514
+        ]
+      },
+      "properties": {
+        "NAME": "Olmec",
+        "ABBREVN": "Olmec",
+        "SUBJECTO": "Olmec",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Olmec",
+        "COLOR": "#1ABC9C",
+        "AREA": 48715260208.0711
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9822489167289,
+          -9.93642553964845
+        ]
+      },
+      "properties": {
+        "NAME": "El Paraiso",
+        "ABBREVN": null,
+        "SUBJECTO": "El Paraiso",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "El Paraiso",
+        "COLOR": "#45B7D1",
+        "AREA": 157367548190.758
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0245316452867,
+          -2.95315349566973
+        ]
+      },
+      "properties": {
+        "NAME": "Chorrera",
+        "ABBREVN": "Chorrera",
+        "SUBJECTO": "Chorrera",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Chorrera",
+        "COLOR": "#5DADE2",
+        "AREA": 262559195942.277
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.560337053056,
+          -18.8410983088295
+        ]
+      },
+      "properties": {
+        "NAME": "Chinchoros",
+        "ABBREVN": null,
+        "SUBJECTO": "Chinchoros",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Chinchoros",
+        "COLOR": "#F8C471",
+        "AREA": 46004930408.5815
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -45.9828094003441,
+          -22.9059057588637
+        ]
+      },
+      "properties": {
+        "NAME": "Shellfish gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Shellfish gatherers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Shellfish gatherers",
+        "COLOR": "#34495E",
+        "AREA": 149325686831.3
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.384670218953,
+          42.7000111221792
+        ]
+      },
+      "properties": {
+        "NAME": "Plain bison hunters",
+        "ABBREVN": null,
+        "SUBJECTO": "Plain bison hunters",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Plain bison hunters",
+        "COLOR": "#8E44AD",
+        "AREA": 2859177997275.89
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.98654156701,
+          46.9072688315263
+        ]
+      },
+      "properties": {
+        "NAME": "Plateau fichers and hunter gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Plateau fichers and hunter gatherers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Plateau fichers and hunter gatherers",
+        "COLOR": "#F39C12",
+        "AREA": 723425877495.191
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.5386762269,
+          37.747344334716
+        ]
+      },
+      "properties": {
+        "NAME": "Desert hunter-gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Desert hunter-gatherers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Desert hunter-gatherers",
+        "COLOR": "#16A085",
+        "AREA": 2354768589621.15
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -62.5014087774759,
+          -7.03778389979003
+        ]
+      },
+      "properties": {
+        "NAME": "Amazon hunter-gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Amazon hunter-gatherers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Amazon hunter-gatherers",
+        "COLOR": "#F1C40F",
+        "AREA": 4286852779194.74
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -56.8902221013077,
+          -21.9656525724717
+        ]
+      },
+      "properties": {
+        "NAME": "Savanna hunter-gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Savanna hunter-gatherers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Savanna hunter-gatherers",
+        "COLOR": "#5DADE2",
+        "AREA": 4832065493857.58
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -62.7919402032188,
+          -34.6439926043276
+        ]
+      },
+      "properties": {
+        "NAME": "Pampas cultures",
+        "ABBREVN": null,
+        "SUBJECTO": "Pampas cultures",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Pampas cultures",
+        "COLOR": "#2980B9",
+        "AREA": 1835662734896.55
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.4057909700757,
+          -32.2879494721979
+        ]
+      },
+      "properties": {
+        "NAME": "Andean hunter-gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Andean hunter-gatherers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Andean hunter-gatherers",
+        "COLOR": "#58D68D",
+        "AREA": 745533626525.644
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.838961568372,
+          -49.4531768930369
+        ]
+      },
+      "properties": {
+        "NAME": "Patagonian shellfish and marine mammal hunters",
+        "ABBREVN": null,
+        "SUBJECTO": "Patagonian shellfish and marine mammal hunters",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Patagonian shellfish and marine mammal hunters",
+        "COLOR": "#D5DBDB",
+        "AREA": 208362676700.423
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.760136359481,
+          21.0017501805688
+        ]
+      },
+      "properties": {
+        "NAME": "Maize farmers",
+        "ABBREVN": null,
+        "SUBJECTO": "Maize farmers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Maize farmers",
+        "COLOR": "#F8D7DA",
+        "AREA": 1588585120446.67
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.0130752502561,
+          3.02352715902537
+        ]
+      },
+      "properties": {
+        "NAME": "Manioc farmers",
+        "ABBREVN": null,
+        "SUBJECTO": "Manioc farmers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Manioc farmers",
+        "COLOR": "#E74C3C",
+        "AREA": 4776647485413.57
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.5827460603686,
+          10.2044202362887
+        ]
+      },
+      "properties": {
+        "NAME": "Caribbean hunter-gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Caribbean hunter-gatherers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Caribbean hunter-gatherers",
+        "COLOR": "#82E0AA",
+        "AREA": 282790420313.059
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.6192278233169,
+          34.0098343007815
+        ]
+      },
+      "properties": {
+        "NAME": "Poverty point culture",
+        "ABBREVN": null,
+        "SUBJECTO": "Poverty point culture",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Poverty point culture",
+        "COLOR": "#85C1E9",
+        "AREA": 147884964363.767
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.0384365301,
+          45.310507366746
+        ]
+      },
+      "properties": {
+        "NAME": "North American Pacifi foraging, hunting and fishing peoples",
+        "ABBREVN": null,
+        "SUBJECTO": "North American Pacifi foraging, hunting and fishing peoples",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "North American Pacifi foraging, hunting and fishing peoples",
+        "COLOR": "#9B59B6",
+        "AREA": 493559289870.382
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.896253960782,
+          59.6203926564508
+        ]
+      },
+      "properties": {
+        "NAME": "Subarctic forest hunter-gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Subarctic forest hunter-gatherers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Subarctic forest hunter-gatherers",
+        "COLOR": "#F7DC6F",
+        "AREA": 4337117802758.58
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.467476162417,
+          -23.2814318311626
+        ]
+      },
+      "properties": {
+        "NAME": "Australian aboriginal hunter-gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Australian aboriginal hunter-gatherers",
+        "TYPE": "hunter-gatherers",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Australian aboriginal hunter-gatherers",
+        "COLOR": "#BB8FCE",
+        "AREA": 7619331388002.5
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.591555591485,
+          18.0412622629304
+        ]
+      },
+      "properties": {
+        "NAME": "Austro-Asiatic rice farmers",
+        "ABBREVN": null,
+        "SUBJECTO": "Austro-Asiatic rice farmers",
+        "TYPE": "rice farmers",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Austro-Asiatic rice farmers",
+        "COLOR": "#F1C40F",
+        "AREA": 2206716787305.37
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.59156863215492,
+          40.1825902951185
+        ]
+      },
+      "properties": {
+        "NAME": "Celtiberians",
+        "ABBREVN": null,
+        "SUBJECTO": "Celtiberians",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Celtiberians",
+        "COLOR": "#82E0AA",
+        "AREA": 552040993890.948
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.38811247285497,
+          34.5008049695152
+        ]
+      },
+      "properties": {
+        "NAME": "Berbers",
+        "ABBREVN": null,
+        "SUBJECTO": "Berbers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Berbers",
+        "COLOR": "#F7DC6F",
+        "AREA": 1099256229381.32
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.2137278494622,
+          6.30493586074043
+        ]
+      },
+      "properties": {
+        "NAME": "West African cereal farmers",
+        "ABBREVN": null,
+        "SUBJECTO": "West African cereal farmers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "West African cereal farmers",
+        "COLOR": "#D35400",
+        "AREA": 6037943957546.71
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.5537172382115,
+          -10.1337574282723
+        ]
+      },
+      "properties": {
+        "NAME": "Khoiasan",
+        "ABBREVN": null,
+        "SUBJECTO": "Khoiasan",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Khoiasan",
+        "COLOR": "#98D8C8",
+        "AREA": 11174468509734.8
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.58832415154559,
+          22.6438935774123
+        ]
+      },
+      "properties": {
+        "NAME": "Saharan pastoral nomads",
+        "ABBREVN": null,
+        "SUBJECTO": "Saharan pastoral nomads",
+        "TYPE": "pastoral nomads",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Saharan pastoral nomads",
+        "COLOR": "#8E44AD",
+        "AREA": 10059687425800.1
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.7493270298321,
+          8.715148564405
+        ]
+      },
+      "properties": {
+        "NAME": "Ethiopian highland farmers",
+        "ABBREVN": null,
+        "SUBJECTO": "Ethiopian highland farmers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Ethiopian highland farmers",
+        "COLOR": "#27AE60",
+        "AREA": 376537345818.122
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.449160012259,
+          50.0419221030172
+        ]
+      },
+      "properties": {
+        "NAME": "Prot-Altaic pastoralists",
+        "ABBREVN": null,
+        "SUBJECTO": "Prot-Altaic pastoralists",
+        "TYPE": "pastoralists",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Prot-Altaic pastoralists",
+        "COLOR": "#D35400",
+        "AREA": 5003071055368.23
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.7168448081876,
+          49.4699395572864
+        ]
+      },
+      "properties": {
+        "NAME": "Cimerians",
+        "ABBREVN": null,
+        "SUBJECTO": "Cimerians",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Cimerians",
+        "COLOR": "#2ECC71",
+        "AREA": 2200268194519.6
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          124.886618304368,
+          60.8799826121672
+        ]
+      },
+      "properties": {
+        "NAME": "Paleo-Siberian hunter-gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Paleo-Siberian hunter-gatherers",
+        "TYPE": "hunter-gatherers",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Paleo-Siberian hunter-gatherers",
+        "COLOR": "#FFA07A",
+        "AREA": 7187309731215.09
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          60.0480807188099,
+          62.3831817943727
+        ]
+      },
+      "properties": {
+        "NAME": "Finno-Ugric taiga hunter-gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Finno-Ugric taiga hunter-gatherers",
+        "TYPE": "taiga hunter-gatherers",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Finno-Ugric taiga hunter-gatherers",
+        "COLOR": "#AF7AC5",
+        "AREA": 3536117693085.23
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          89.4480413616541,
+          34.0759491849166
+        ]
+      },
+      "properties": {
+        "NAME": "Tibetans",
+        "ABBREVN": null,
+        "SUBJECTO": "Tibetans",
+        "TYPE": "transhumant pastoralists",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Tibetans",
+        "COLOR": "#5DADE2",
+        "AREA": 3314821917488.08
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.586135247474,
+          32.3128401602375
+        ]
+      },
+      "properties": {
+        "NAME": "Wu",
+        "ABBREVN": null,
+        "SUBJECTO": "Wu",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Wu",
+        "COLOR": "#F4D03F",
+        "AREA": 215858351877.413
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.3815899174632,
+          18.1167309728919
+        ]
+      },
+      "properties": {
+        "NAME": "Dravidians",
+        "ABBREVN": null,
+        "SUBJECTO": "Dravidians",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Dravidians",
+        "COLOR": "#F7DC6F",
+        "AREA": 2771690319747.01
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.0365833503676,
+          28.4570734848017
+        ]
+      },
+      "properties": {
+        "NAME": "Vedic Aryans",
+        "ABBREVN": null,
+        "SUBJECTO": "Vedic Aryans",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Vedic Aryans",
+        "COLOR": "#F7DC6F",
+        "AREA": 999151492232.183
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          95.8489117784119,
+          24.3626198161263
+        ]
+      },
+      "properties": {
+        "NAME": "Burmese",
+        "ABBREVN": null,
+        "SUBJECTO": "Burmese",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Burmese",
+        "COLOR": "#D35400",
+        "AREA": 963005048728.631
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.322690846226,
+          62.4761529670038
+        ]
+      },
+      "properties": {
+        "NAME": "Arctic marine mammal hunters",
+        "ABBREVN": null,
+        "SUBJECTO": "Arctic marine mammal hunters",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Arctic marine mammal hunters",
+        "COLOR": "#F39C12",
+        "AREA": 3091889595599.65
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.7352908705333,
+          65.8699902307608
+        ]
+      },
+      "properties": {
+        "NAME": "Saami",
+        "ABBREVN": null,
+        "SUBJECTO": "Saami",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Saami",
+        "COLOR": "#E74C3C",
+        "AREA": 631170424532.779
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.947628878988,
+          42.5997694676332
+        ]
+      },
+      "properties": {
+        "NAME": "Thrace",
+        "ABBREVN": null,
+        "SUBJECTO": "Thrace",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Thrace",
+        "COLOR": "#34495E",
+        "AREA": 255909548727.981
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.5850482494919,
+          44.8897666512765
+        ]
+      },
+      "properties": {
+        "NAME": "Illyrians",
+        "ABBREVN": null,
+        "SUBJECTO": "Illyrians",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Illyrians",
+        "stroke": "#F7DC6F",
+        "AREA": 221201361156.81
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.4453376031864,
+          38.6879533159322
+        ]
+      },
+      "properties": {
+        "NAME": "Phrygians",
+        "ABBREVN": null,
+        "SUBJECTO": "Phrygians",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Phrygians",
+        "stroke": "#2ECC71",
+        "AREA": 182044159381.933
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0108873977608,
+          39.2622448292952
+        ]
+      },
+      "properties": {
+        "NAME": "Urartu",
+        "ABBREVN": "Urartu",
+        "SUBJECTO": "Urartu",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Urartu",
+        "COLOR": "#FFA07A",
+        "AREA": 286824223203.684
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.3152239323643,
+          39.0437305795735
+        ]
+      },
+      "properties": {
+        "NAME": "Hittites",
+        "ABBREVN": null,
+        "SUBJECTO": "Hittites",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Hittites",
+        "COLOR": "#F8D7DA",
+        "AREA": 413140387559.228
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.71852843730534,
+          48.4850743119764
+        ]
+      },
+      "properties": {
+        "NAME": "Urnfield cultures",
+        "ABBREVN": null,
+        "SUBJECTO": "Urnfield cultures",
+        "TYPE": "cultures",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Urnfield cultures",
+        "COLOR": "#3498DB",
+        "AREA": 1523893142910.18
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.569366143848,
+          36.1664151640305
+        ]
+      },
+      "properties": {
+        "NAME": "Paleo-Koreans",
+        "ABBREVN": null,
+        "SUBJECTO": "Paleo-Koreans",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Paleo-Koreans",
+        "COLOR": "#E74C3C",
+        "AREA": 149764361928.377
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.372420343859,
+          35.8733478414601
+        ]
+      },
+      "properties": {
+        "NAME": "Late Jomon culture",
+        "ABBREVN": null,
+        "SUBJECTO": "Late Jomon culture",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Late Jomon culture",
+        "COLOR": "#D5DBDB",
+        "AREA": 227982394761.514
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.579936060412,
+          43.3542686330861
+        ]
+      },
+      "properties": {
+        "NAME": "Ainu",
+        "ABBREVN": null,
+        "SUBJECTO": "Ainu",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Ainu",
+        "COLOR": "#85C1E9",
+        "AREA": 78495766429.7647
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.4412795651831,
+          55.5655557550812
+        ]
+      },
+      "properties": {
+        "NAME": "N. European Bronze Age cultures",
+        "ABBREVN": null,
+        "SUBJECTO": "N. European Bronze Age cultures",
+        "TYPE": "N. European Bronze Age cultures",
+        "BORDERPRECISION": 1,
+        "PARTOF": "N. European Bronze Age cultures",
+        "COLOR": "#4ECDC4",
+        "AREA": 1587740296755.47
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.4107099750919,
+          48.9489063901221
+        ]
+      },
+      "properties": {
+        "NAME": "Karasuk culture",
+        "ABBREVN": null,
+        "SUBJECTO": "Karasuk culture",
+        "TYPE": "culture",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Karasuk culture",
+        "COLOR": "#FF6B6B",
+        "AREA": 4367106250948.89
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          60.9905297191187,
+          35.6915895867145
+        ]
+      },
+      "properties": {
+        "NAME": "Iranian pastoralists",
+        "ABBREVN": null,
+        "SUBJECTO": "Iranian pastoralists",
+        "TYPE": "pastoralists",
+        "BORDERPRECISION": 1,
+        "PARTOF": "Iranian pastoralists",
+        "COLOR": "#D35400",
+        "AREA": 2841070068698.98
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.5914141727452,
+          35.6066036690042
+        ]
+      },
+      "properties": {
+        "NAME": "state societies and Aramaean kingdoms",
+        "ABBREVN": null,
+        "SUBJECTO": "state societies and Aramaean kingdoms",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "state societies and Aramaean kingdoms",
+        "COLOR": "#45B7D1",
+        "AREA": 328250345883.238
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.9514081564342,
+          32.8060907132108
+        ]
+      },
+      "properties": {
+        "NAME": "Arameans",
+        "ABBREVN": null,
+        "SUBJECTO": "Arameans",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Arameans",
+        "COLOR": "#F8C471",
+        "AREA": 420215043553.523
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          124.216654250206,
+          42.2082890542109
+        ]
+      },
+      "properties": {
+        "NAME": "Sinic",
+        "ABBREVN": null,
+        "SUBJECTO": "Sinic",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Sinic",
+        "COLOR": "#8E44AD",
+        "AREA": 1706229042933.29
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.6702333484619,
+          39.4745308375599
+        ]
+      },
+      "properties": {
+        "NAME": "Greek city-states",
+        "ABBREVN": null,
+        "SUBJECTO": "Greek city-states",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Greek city-states",
+        "COLOR": "#F8C471",
+        "AREA": 92833072782.1208
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.8005633261732,
+          36.324194802693
+        ]
+      },
+      "properties": {
+        "NAME": "Eastern North Amercian hunter-gatherers",
+        "ABBREVN": null,
+        "SUBJECTO": "Eastern North Amercian hunter-gatherers",
+        "TYPE": null,
+        "BORDERPRECISION": 1,
+        "PARTOF": "Eastern North Amercian hunter-gatherers",
+        "COLOR": "#16A085",
+        "AREA": 3448222074702.18
+      }
+    }
+  ]
+}

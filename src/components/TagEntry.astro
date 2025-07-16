@@ -1,0 +1,100 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import type {
+  AuthorContext,
+  DocumentContext,
+  NavigationContext,
+  PageContext,
+} from "../types";
+
+import Article from "./Article.astro";
+import ArticleTitle from "./ArticleTitle.astro";
+import ListItem from "./ListItem.astro";
+import TagIcon from "./TagIcon.astro";
+import { ignoreTags } from "../helpers/buildTags";
+import { render } from "astro:content";
+import YouMayLike from "../components/YouMayLike.astro";
+
+export type Props = {
+  author?: AuthorContext;
+  documents: DocumentContext[];
+  entry?: DocumentContext;
+  navigation: NavigationContext;
+  page: PageContext;
+  tag: CollectionEntry<"tags">;
+  tags: CollectionEntry<"tags">[];
+};
+
+const { tag, tags, documents, entry, navigation, page } = Astro.props;
+
+const documentTagShouldBeShown =
+  (d: CollectionEntry<"documents">) => (t: CollectionEntry<"tags">) =>
+    t.data.id !== tag.data.id &&
+    d.data.tags?.includes(t.data.id) &&
+    !ignoreTags.includes(t.data.id);
+
+const { Content } = entry?.body ? await render(entry) : {};
+---
+
+<Article class="pt-0! px-0!">
+  <ArticleTitle
+    class:list={[
+      "rounded-t-xl sticky top-0 px-4 lg:px-8 pt-4 lg:pt-8 z-10 bg-article-background dark:bg-article-background-dark -mr-5",
+      tag.data.description && "!mb-2",
+      "flex justify-center items-baseline gap-2 lg:gap-4",
+    ]}
+  >
+    <TagIcon
+      class="inline-block"
+      icon={tag.data.icon}
+      type={tag.data.type}
+      size="2xl"
+    />
+    {tag.data.name}
+  </ArticleTitle>
+  <div class="px-4 lg:px-8">
+    {
+      tag.data.description && (
+        <h2 class="!mt-2 !mb-2 text-center text-subtitle-foreground dark:text-subtitle-foreground-dark opacity-60 italic">
+          {entry?.data.subtitle ?? tag.data.description}
+        </h2>
+      )
+    }
+    {
+      !Content && (
+        <ul class="not-prose grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-3">
+          {documents.map((d) => (
+            <ListItem
+              tags={tags.filter(documentTagShouldBeShown(d))}
+              activeTag={tag}
+              document={d}
+            />
+          ))}
+        </ul>
+      )
+    }
+    {
+      Content && (
+        <ul class="mt-8 not-prose grid grid-rows-2 md:grid-rows-3 auto-cols-[80%] md:auto-cols-[50%] lg:auto-cols-[33%] xl:auto-cols-[25%] 2xl:auto-cols-[16%] grid-flow-col overflow-x-auto overflow-y-hidden gap-3 md:p-3 scrollbar-none">
+          {documents.map((d) => (
+            <ListItem
+              tags={tags.filter(documentTagShouldBeShown(d))}
+              activeTag={tag}
+              document={d}
+            />
+          ))}
+        </ul>
+      )
+    }
+    <!-- {
+    entry?.data.subtitle && (
+      <h3 class="text-4xl !mt-2 text-center text-subtitle-foreground dark:text-subtitle-foreground-dark opacity-60 italic">
+        {entry?.data.subtitle}
+      </h3>
+    )
+  } -->
+    {Content && <Content />}
+    {entry && <YouMayLike document={entry} />}
+  </div>
+</Article>

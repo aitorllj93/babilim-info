@@ -1,0 +1,43 @@
+---
+import type { GetImageResult, ImageMetadata } from 'astro';
+import '../styles/global.css';
+
+import type { DocumentContext, PageContext } from '../types';
+
+import Head from './Head.astro';
+
+export type Props = {
+  backgroundImage?: GetImageResult|ImageMetadata;
+  backgroundPosition?: {
+    x?: number;
+    y?: number;
+  };
+  class?: string;
+  page: PageContext
+  document?: DocumentContext;
+  scrollable?: boolean;
+}
+
+const { backgroundImage, backgroundPosition, class: className, document, page, scrollable } = Astro.props;
+
+const { language } = page;
+---
+<!doctype html>
+<html class="scroll-smooth scrollbar-thin scrollbar-thumb-scrollbar-thumb dark:scrollbar-thumb-scrollbar-thumb-dark scrollbar-track-transparent" lang={language}>
+  <Head page={page} />
+  <body class:list={[
+    "w-full h-full bg-background dark:bg-background-dark",
+    scrollable ? 'overflow-x-hidden' : 'overflow-hidden',
+    backgroundImage && `bg-no-repeat bg-cover bg-top-left bg-fixed`,
+    className,
+  ]} style={
+    `${backgroundImage ? `background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImage.src});` : ''}; ${backgroundPosition && `background-position: ${backgroundPosition.x}% ${backgroundPosition.y}%;`}`
+  }>
+    <div class="bg-texture bg-texture-light dark:bg-texture-dark" />
+    <main class="flex sm:p-3 lg:p-6 lg:gap-6 items-start overflow-clip">
+      <slot />
+    </main>
+    <!-- <Footer document={document}  /> -->
+    <script src="./CustomElements/LeafletMap.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+---
+import type { ObsidianWikiLinkSchema } from "astro-loader-obsidian";
+import type { CollectionEntry, z } from "astro:content";
+import { getDocuments, getTags } from "../helpers/getProps";
+import ListItem from "./ListItem.astro";
+
+type Link = z.infer<typeof ObsidianWikiLinkSchema>;
+
+export type Props = {
+  title: string;
+  links?: (Link | undefined)[];
+};
+
+const { title, links } = Astro.props;
+
+const allDocuments = getDocuments();
+const allTags = getTags();
+
+const documentTagShouldBeShown =
+  (d: CollectionEntry<"documents">) => (t: CollectionEntry<"tags">) =>
+    d.data.tags?.includes(t.data.id);
+
+const definedLinks = (links ?? [])?.filter((l) => l !== undefined) as Link[];
+
+const notInWikiLinks = definedLinks.filter((l) => !l.href);
+const inWikiLinks = definedLinks
+  .filter((l) => l.href && l.id)
+  .map((l) => allDocuments.find((d) => d.data.permalink === l.href))
+  .filter(Boolean) as CollectionEntry<"documents">[];
+---
+
+{
+  definedLinks && definedLinks.length > 0 && (
+    <li class="flex flex-col">
+      <h2 class="text-xl text-menu-foreground dark:text-menu-foreground-dark mb-2 font-menu">
+        {title}
+      </h2>
+      <ul class="flex flex-col gap-2">
+        {inWikiLinks.map((d) => (
+          <ListItem
+            document={d}
+            tags={allTags.filter(documentTagShouldBeShown(d))}
+            showTags={false}
+          />
+        ))}
+        {notInWikiLinks.length > 0 && (
+          <div class="font-menu text-menu-foreground dark:text-menu-foreground-dark">
+            <span class="font-bold">Not Registered:</span>
+            {notInWikiLinks.map((l) => l.title).join(", ")}
+          </div>
+        )}
+      </ul>
+    </li>
+  )
+}

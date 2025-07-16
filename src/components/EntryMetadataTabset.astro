@@ -1,0 +1,138 @@
+---
+import type { DocumentContext, NavigationContext } from "../types";
+import NavigationBackLinks from "./Navigation/BackLinks.astro";
+import NavigationLinks from "./Navigation/Links.astro";
+import TableOfContents from "./Navigation/TableOfContents.astro";
+import Relationships from "./Relationships.astro";
+
+export type Props = {
+  id?: string;
+  document?: DocumentContext;
+  navigation: NavigationContext;
+  showToC?: boolean;
+  showLinks?: boolean;
+  showRelations?: boolean;
+};
+
+const { id, document, navigation, showToC = true, showLinks = true, showRelations = true } = Astro.props;
+
+const gridTemplates = {
+  "[grid-template-areas:'tab1_tab2_tab3''tabcontent_tabcontent_tabcontent'] grid-cols-3": showToC && showLinks && showRelations,
+  "[grid-template-areas:'a_tab2_tab3''a_tabcontent_tabcontent'] grid-cols-2": !showToC && showLinks && showRelations,
+  "[grid-template-areas:'a_b_tab3''a_b_tabcontent'] grid-cols-1": !showToC && !showLinks && showRelations,
+  "[grid-template-areas:'a_b_c''a_b_c']": !showToC && !showLinks && !showRelations,
+  "[grid-template-areas:'tab1_b_tab3''tabcontent_b_tabcontent'] grid-cols-2": showToC && !showLinks && showRelations,
+  "[grid-template-areas:'tab1_b_c''tabcontent_b_c'] grid-cols-1": showToC && !showLinks && !showRelations,
+  "[grid-template-areas:'tab1_tab2''tabcontent_tabcontent'] grid-cols-2": showToC && showLinks && !showRelations,
+};
+
+const template = Object.entries(gridTemplates).find(([k, v]) => v === true)?.[0];
+---
+
+<!--  uses radio buttons -->
+<section
+  class:list={[
+    "grid",
+    template
+  ]}
+>
+  {showToC && (<input
+    id={`${id}-tab-one`}
+    type="radio"
+    name={id}
+    class="peer/tab-one opacity-0 absolute [grid-area:tab1]"
+    checked
+  />
+  <label
+    for={`${id}-tab-one`}
+    class="[grid-area:tab1] bg-white/0 text-text dark:text-text-dark border-tab-active-border dark:border-tab-active-border-dark border-b hover:border-b-0 hover:border hover:bg-tab-active-background dark:hover:bg-tab-active-background-dark peer-checked/tab-one:border peer-checked/tab-one:border-b-0 peer-checked/tab-one:bg-tab-active-background dark:peer-checked/tab-one:bg-tab-active-background-dark cursor-pointer p-2 rounded-t-lg flex justify-center truncate"
+    title="Outline"
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      width="24"
+      height="24"
+      ><path
+        fill="currentColor"
+        d="M14.4 9H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1h5.8c.552 0 .6-.447.6-1s-.048-1-.6-1m2 5H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1h7.8c.552 0 .6-.447.6-1s-.048-1-.6-1M8.6 6h7.8c.552 0 .6-.447.6-1s-.048-1-.6-1H8.6c-.552 0-.6.447-.6 1s.048 1 .6 1M5.4 9H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1m0 5H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1m0-10H3.6c-.552 0-.6.447-.6 1s.048 1 .6 1h1.8c.552 0 .6-.447.6-1s-.048-1-.6-1"
+      ></path>
+    </svg>
+  </label>)}
+
+  {showLinks && (<input
+    id={`${id}-tab-two`}
+    type="radio"
+    name={id}
+    class="peer/tab-two opacity-0 absolute [grid-area:tab2]"
+  />
+  <label
+    for={`${id}-tab-two`}
+    class="[grid-area:tab2] bg-white/0 text-text dark:text-text-dark border-tab-active-border dark:border-tab-active-border-dark border-b hover:border-b-0 hover:border hover:bg-tab-active-background dark:hover:bg-tab-active-background-dark peer-checked/tab-two:border peer-checked/tab-two:border-b-0 peer-checked/tab-two:bg-tab-active-background dark:peer-checked/tab-two:bg-tab-active-background-dark cursor-pointer p-2 rounded-t-lg flex justify-center"
+    title="Links"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      ><g
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-width="1.5"
+        ><path
+          d="M10.046 14c-1.506-1.512-1.37-4.1.303-5.779l4.848-4.866c1.673-1.68 4.25-1.816 5.757-.305s1.37 4.1-.303 5.78l-2.424 2.433"
+        ></path><path
+          d="M13.954 10c1.506 1.512 1.37 4.1-.303 5.779l-2.424 2.433l-2.424 2.433c-1.673 1.68-4.25 1.816-5.757.305s-1.37-4.1.303-5.78l2.424-2.433"
+          opacity="0.5"></path></g
+      ></svg
+    >
+  </label>)}
+
+  {showRelations && (<input
+    id={`${id}-tab-three`}
+    type="radio"
+    name={id}
+    class="peer/tab-three opacity-0 absolute [grid-area:tab3]"
+  />
+  <label
+    for={`${id}-tab-three`}
+    class="[grid-area:tab3] bg-white/0 text-text dark:text-text-dark border-tab-active-border dark:border-tab-active-border-dark border-b hover:border-b-0 hover:border hover:bg-tab-active-background dark:hover:bg-tab-active-background-dark peer-checked/tab-three:border peer-checked/tab-three:border-b-0 peer-checked/tab-three:bg-tab-active-background dark:peer-checked/tab-three:bg-tab-active-background-dark cursor-pointer p-2 rounded-t-lg flex justify-center"
+    title="Graph"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 256 256"
+      width="24"
+      height="24"
+      ><path
+        fill="currentColor"
+        d="M200 152a31.84 31.84 0 0 0-19.53 6.68l-23.11-18A31.65 31.65 0 0 0 160 128c0-.74 0-1.48-.08-2.21l13.23-4.41A32 32 0 1 0 168 104c0 .74 0 1.48.08 2.21l-13.23 4.41A32 32 0 0 0 128 96a32.6 32.6 0 0 0-5.27.44L115.89 81A32 32 0 1 0 96 88a32.6 32.6 0 0 0 5.27-.44l6.84 15.4a31.92 31.92 0 0 0-8.57 39.64l-25.71 22.84a32.06 32.06 0 1 0 10.63 12l25.71-22.84a31.91 31.91 0 0 0 37.36-1.24l23.11 18A31.65 31.65 0 0 0 168 184a32 32 0 1 0 32-32m0-64a16 16 0 1 1-16 16a16 16 0 0 1 16-16M80 56a16 16 0 1 1 16 16a16 16 0 0 1-16-16M56 208a16 16 0 1 1 16-16a16 16 0 0 1-16 16m144-8a16 16 0 1 1 16-16a16 16 0 0 1-16 16"
+      ></path></svg
+    >
+  </label>)}
+
+  
+  {showToC && (<div
+    class="hidden peer-checked/tab-one:flex flex-col p-4 overflow-hidden w-full [grid-area:tabcontent]"
+  >
+    <TableOfContents document={document} />
+  </div>)}
+  
+  {showLinks && (<div
+    class="hidden peer-checked/tab-two:flex flex-col p-4 overflow-hidden w-full [grid-area:tabcontent]"
+  >
+    <div
+      class="flex flex-col gap-0.5 max-h-[calc(100dvh_-_150px)] md:max-h-[calc(100dvh_-_170px)] scrollbar-thin overflow-auto"
+    >
+      <NavigationLinks document={document} />
+      <NavigationBackLinks navigation={navigation} />
+    </div>
+  </div>)}
+  
+  {showRelations && (<div
+    class="hidden peer-checked/tab-three:flex flex-col p-4 overflow-hidden w-full [grid-area:tabcontent]"
+  >
+    {document && <Relationships document={document} />}
+  </div>)}
+</section>

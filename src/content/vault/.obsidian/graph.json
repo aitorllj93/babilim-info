@@ -1,0 +1,86 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "tag:#culture/greek  ",
+      "color": {
+        "a": 1,
+        "rgb": 2914505
+      }
+    },
+    {
+      "query": "tag:#culture/roman  ",
+      "color": {
+        "a": 1,
+        "rgb": 16735493
+      }
+    },
+    {
+      "query": "tag:#culture/irish OR tag:#culture/celtic  ",
+      "color": {
+        "a": 1,
+        "rgb": 6084188
+      }
+    },
+    {
+      "query": "tag:#culture/norse ",
+      "color": {
+        "a": 1,
+        "rgb": 12254712
+      }
+    },
+    {
+      "query": "tag:#culture/punic OR tag:#culture/phoenician  ",
+      "color": {
+        "a": 1,
+        "rgb": 11622745
+      }
+    },
+    {
+      "query": "tag:#culture/vedic OR tag:#culture/hindu  ",
+      "color": {
+        "a": 1,
+        "rgb": 10475100
+      }
+    },
+    {
+      "query": "tag:#culture/mesopotamian  ",
+      "color": {
+        "a": 1,
+        "rgb": 14048448
+      }
+    },
+    {
+      "query": "tag:#culture/persian  ",
+      "color": {
+        "a": 1,
+        "rgb": 11361494
+      }
+    },
+    {
+      "query": "tag:#culture/hebrew OR tag:#culture/semitic  ",
+      "color": {
+        "a": 1,
+        "rgb": 16759015
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.43885849297090884,
+  "close": false
+}

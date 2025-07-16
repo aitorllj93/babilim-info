@@ -1,0 +1,46 @@
+---
+
+import type {
+  AuthorContext,
+  DocumentContext,
+  NavigationContext,
+  PageContext,
+  TagsContext,
+} from "../types";
+
+import website from "../../website.config";
+
+import Entry from "../components/Entry.astro";
+import Layout from "../components/Layout.astro";
+import LeftSidebar from "../components/LeftSidebar.astro";
+import RightSidebar from "../components/RightSidebar.astro";
+import { isMytheme, getDocumentPageStaticPaths } from "../helpers/getProps";
+import { getImage } from "astro:assets";
+
+export type Props = {
+  author?: AuthorContext;
+  document: DocumentContext;
+  navigation: NavigationContext;
+  page: PageContext;
+  tags: TagsContext;
+};
+
+export const getStaticPaths = getDocumentPageStaticPaths;
+
+const { document, navigation, page, tags, } = Astro.props;
+
+const coverImage = document.data.cover ? (await getImage({
+  src: document.data.cover,
+  format: 'webp',
+  quality: 'high',
+})) : undefined;
+---
+
+<Layout backgroundImage={coverImage} backgroundPosition={{
+  x: document.data["cover-x"],
+  y: document.data["cover-y"],
+}} page={page} document={document}>
+  <LeftSidebar website={website} navigation={navigation} />
+  <Entry document={document} tags={tags} />
+  <RightSidebar showRelations={!isMytheme(document)} document={document} navigation={navigation} />
+</Layout>

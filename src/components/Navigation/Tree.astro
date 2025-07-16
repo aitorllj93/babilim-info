@@ -1,0 +1,17 @@
+---
+import type { NavigationContext } from "../../types";
+
+import Leaf from "./Leaf.astro";
+
+export type Props = {
+  navigation: NavigationContext;
+};
+
+const { tree } = Astro.props.navigation;
+---
+
+<nav class="h-[var(--left-sidebar-content-height)] overflow-auto scrollbar-thin">
+  <ul class="flex flex-col mt-4 gap-0.5">
+    {tree.map((document) => <Leaf node={document} />)}
+  </ul>
+</nav>
