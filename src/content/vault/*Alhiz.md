@@ -22,7 +22,7 @@ cover-x: 50
 cover-y: 25
 ---
 ## Introduction
-*Alhiz were the divine horse twins in Proto-Germanic mythology, representing a continuation of the Indo-European tradition of divine twin horsemen. Their name and mythology reflect the sacred role of horses in Germanic religious thought and their connection to broader Indo-European twin deities like the [[Ashvins]], [[Dioscuri]], and [[Ašvieniai]].
+\*Alhiz were the divine horse twins in Proto-Germanic mythology, representing a continuation of the Indo-European tradition of divine twin horsemen. Their name and mythology reflect the sacred role of horses in Germanic religious thought and their connection to broader Indo-European twin deities like the [[Ashvins]], [[Dioscuri]], and [[Ašvieniai]].
 
 ---
 

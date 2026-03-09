@@ -1,14 +1,15 @@
+import sitemap from '@astrojs/sitemap';
 import icon from "astro-icon";
 import pagefind from "astro-pagefind";
 import { defineConfig } from 'astro/config';
 
 
 import tailwindcss from '@tailwindcss/vite';
+
 import markdown from "./astro/markdown/config";
 
 import websiteConfig from './website.config';
 
-import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({

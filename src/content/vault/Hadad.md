@@ -2,9 +2,12 @@
 title: "Hadad"
 subtitle: "Thunderer of Heaven, Lord of Abundance"
 description: "The mighty storm god who brought both life-giving rains and devastating tempests to the ancient Near East"
-tags: ["culture/mesopotamian","culture/syrian","culture/aramean","domain/weather","domain/storm","domain/fertility","trait/male","trait/deity","trait/warrior","motif/A280"]
+tags: ["culture/canaanite", "culture/mesopotamian","culture/syrian","culture/aramean","domain/weather","domain/storm","domain/fertility","trait/male","trait/deity","trait/warrior","motif/A280"]
 references: ["https://www.britannica.com/topic/Hadad","https://www.worldhistory.org/hadad/","https://www.ancient.eu/Hadad/"]
-relateds: ["[[Baal]]","[[Yam]]","[[Teshub]]","[[Ishkur]]","[[Zeus]]"]
+relateds: ["[[Yam]]","[[Ishkur]]"]
+aliases: ["Baal Hadad"]
+cognates: ["[[Adad]]"]
+syncretics: ["[[Baal]]", "[[Teshub]]", "[[Zeus]]", "[[Jupiter]]", "[[Horus]]"]
 cover: "[[Assets/Hadad.jpg]]"
 cover-x: 50
 cover-y: 25

@@ -4,7 +4,7 @@ subtitle: "The Storm-Bringer of Urartu, Lord of Thunder"
 description: "The powerful weather deity of ancient Urartu who commanded storms and lightning as part of the supreme divine triad"
 tags: ["culture/urartian","domain/weather","domain/thunder","domain/war","trait/male","type/deity"]
 references: ["https://en.wikipedia.org/wiki/Theispas","https://www.ancient-origins.net/ancient-places-asia/urartian-gods-0015927"]
-father: "[[Habli]]"
+father: "[[Khaldi]]"
 spouses: ["[[Huba]]"]
 allies: ["[[Khaldi]]","[[Shivini]]"]
 cognates: ["[[Teshub]]","[[Adad]]","[[Indra]]"]
@@ -13,7 +13,7 @@ cover-x: 50
 cover-y: 25
 ---
 ##  Introduction
-Theispas (also known as Teisheba or Teišeba) was the mighty weather god of ancient Urartu, commanding storms and thunder as part of the supreme divine triad. As a son of Habli and a member of the principal trinity alongside [[Khaldi]] and [[Shivini]], he wielded tremendous power over atmospheric forces and was sometimes invoked as a god of war <mcreference link="https://en.wikipedia.org/wiki/Theispas" index="1">1</mcreference>.
+Theispas (also known as Teisheba or Teišeba) was the mighty weather god of ancient Urartu, commanding storms and thunder as part of the supreme divine triad. As a son of Khaldi and a member of the principal trinity alongside [[Khaldi]] and [[Shivini]], he wielded tremendous power over atmospheric forces and was sometimes invoked as a god of war <mcreference link="https://en.wikipedia.org/wiki/Theispas" index="1">1</mcreference>.
 
 ---
 

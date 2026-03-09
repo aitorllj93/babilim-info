@@ -18,7 +18,7 @@ references:
 father: "[[An|Anu]]"
 mother: "[[Kumarbi]]"
 spouses:
-  - "[[Ḫepat]]"
+  - "[[Hebat]]"
 siblings:
   - "[[Šauška]]"
   - "[[Tašmišu]]"
@@ -37,6 +37,7 @@ allies:
 cognates:
   - "[[Tarhunna|Tarḫunna]]"
   - "[[Hadad|Adad]]"
+  - "[[Theispas]]"
 syncretics:
   - "[[Baal]]"
   - "[[Zeus]]"

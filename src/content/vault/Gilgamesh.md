@@ -17,6 +17,7 @@ references:
 cover: "[[Assets/Gilgamesh.jpg]]"
 cover-x: 50
 cover-y: 25
+mother: "[[Ninsun]]"
 enemies:
   - "[[Ishtar]]"
   - "[[Humbaba]]"
@@ -25,7 +26,6 @@ allies:
   - "[[Utnapishtim]]"
 relateds:
   - "[[Shamash]]"
-  - "[[Ninsun]]"
 ---
 ## Introduction
 Gilgamesh, the legendary king of Uruk, stands as one of humanity's earliest and most enduring heroes. Two-thirds god and one-third man, his epic journey from tyrannical ruler to wise king through friendship, loss, and the quest for immortality became the foundation of the world's first great work of literature.

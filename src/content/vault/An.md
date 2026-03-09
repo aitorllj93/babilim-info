@@ -24,6 +24,7 @@ offspring:
   - "[[Enlil]]"
   - "[[Enki]]"
   - "[[Inanna]]"
+aliases: ["Anu"]
 cover: "[[Assets/An.jpg]]"
 cover-x: 50
 cover-y: 25
